@@ -22,20 +22,20 @@ function Member(props){
          }
        `}</style>
       <ul>
-        <li><h3>{props.beer} / {props.brand}</h3></li>
+        <li><h3>{props.firstName} / {props.lastName}</h3></li>
         <li></li>
-        <li><p>ABV: {props.percent}%</p></li>
-        <li><p>${props.cost}</p></li>
+        <li><p>ABV: {props.email}%</p></li>
+        <li><p>${props.notesMaster}</p></li>
       </ul>
     </div>
   );
 }
 
 Member.propTypes = {
-  beer: PropTypes.string.isRequired,
-  brand: PropTypes.string.isRequired,
-  percent: PropTypes.string.isRequired,
-  cost: PropTypes.string.isRequired
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  notesMaster: PropTypes.string.isRequired
 };
 
 export default Member;

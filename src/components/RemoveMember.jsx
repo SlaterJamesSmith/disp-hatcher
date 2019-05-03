@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function RemoveKeg(props){
+function RemoveMember(props){
   return (
     <div>
       <style jsx>{`
@@ -22,10 +22,10 @@ function RemoveKeg(props){
          }
        `}</style>
       <ul>
-        <li><h3>{props.beer} / {props.brand}</h3></li>
+        <li><h3>{props.firstName} / {props.lastName}</h3></li>
         <li></li>
-        <li><p>ABV: {props.percent}%</p></li>
-        <li><p>${props.cost}</p></li>
+        <li><p>ABV: {props.email}%</p></li>
+        <li><p>${props.notesMaster}</p></li>
         <button id={props.id}>Remove {props.id}</button>
         <button id={props.id}>Edit {props.id}</button>
       </ul>
@@ -33,12 +33,12 @@ function RemoveKeg(props){
   );
 }
 
-RemoveKeg.propTypes = {
-  beer: PropTypes.string.isRequired,
-  brand: PropTypes.string.isRequired,
-  percent: PropTypes.string.isRequired,
-  cost: PropTypes.string.isRequired,
+RemoveMember.propTypes = {
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  notesMaster: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired
 };
 
-export default RemoveKeg;
+export default RemoveMember;

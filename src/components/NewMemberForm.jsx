@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 
 function NewMemberForm(props){
-  let _beer = null;
-  let _brand = null;
-  let _percent = null;
-  let _cost = null;
+  let _firstName = null;
+  let _lastName = null;
+  let _email = null;
+  let _notesMaster = null;
   let _formVisibleOnPage = true;
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({beer: _beer.value, brand: _brand.value, percent: _percent.value, cost: _cost.value, id: v4()});
+    props.onNewKegCreation({firstName: _firstName.value, lastName: _lastName.value, email: _email.value, notesMaster: _notesMaster.value, id: v4()});
     props.onNewKegForm({formVisibleOnPage: _formVisibleOnPage});
-    _beer.value = '';
-    _brand.value = '';
-    _percent.value = '';
-    _cost.value = '';
+    _firstName.value = '';
+    _lastName.value = '';
+    _email.value = '';
+    _notesMaster.value = '';
     _formVisibleOnPage = true;
   }
 
@@ -36,24 +36,24 @@ function NewMemberForm(props){
       <form onSubmit={handleNewKegFormSubmission}>
         <li><input
           type='text'
-          id='beer'
+          id='firstName'
           placeholder='Beer Name'
-          ref={(input) => {_beer = input;}}/></li>
+          ref={(input) => {_firstName = input;}}/></li>
         <li><input
           type='text'
-          id='brand'
+          id='lastName'
           placeholder='Brand'
-          ref={(input) => {_brand = input;}}/></li>
+          ref={(input) => {_lastName = input;}}/></li>
         <li><input
           type='text'
-          id='percent'
+          id='email'
           placeholder='Percentage'
-          ref={(input) => {_percent = input;}}/></li>
+          ref={(input) => {_email = input;}}/></li>
         <li><input
           type='text'
-          id='cost'
+          id='notesMaster'
           placeholder='Cost'
-          ref={(input) => {_cost = input;}}/></li>
+          ref={(input) => {_notesMaster = input;}}/></li>
         <button type='submit'>Submit</button>
         <button type='submit' onClick={handleCancel}>Cancel</button>
       </form>

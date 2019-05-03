@@ -12,31 +12,31 @@ class ContentContainer extends React.Component{
       formVisibleOnPage: false,
       masterKegList: [
         {
-          beer: 'The Duff Original IPA',
-          brand: 'Duff Beer',
-          percent: '100',
-          cost: '5',
+          firstName: 'The Duff Original IPA',
+          lastName: 'Duff Beer',
+          email: '100',
+          notesMaster: '5',
           key: 'mock1'
         },
         {
-          beer: 'Duff Love',
-          brand: 'Duff Beer',
-          percent: '99',
-          cost: '3',
+          firstName: 'Duff Love',
+          lastName: 'Duff Beer',
+          email: '99',
+          notesMaster: '3',
           key: 'mock2'
         },
         {
-          beer: 'Duffy the Vampire Slayer',
-          brand: 'Duff Beer',
-          percent: '101',
-          cost: '6',
+          firstName: 'Duffy the Vampire Slayer',
+          lastName: 'Duff Beer',
+          email: '101',
+          notesMaster: '6',
           key: 'mock3'
         },
         {
-          beer: 'Duff and Duffer',
-          brand: 'Duff Beer',
-          percent: '101',
-          cost: '6',
+          firstName: 'Duff and Duffer',
+          lastName: 'Duff Beer',
+          email: '101',
+          notesMaster: '6',
           key: 'mock4'
         }
       ]

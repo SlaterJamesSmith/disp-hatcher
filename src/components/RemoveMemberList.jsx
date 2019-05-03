@@ -1,5 +1,5 @@
 import React from 'react';
-import RemoveKeg from './RemoveKeg';
+import RemoveMember from './RemoveMember';
 import PropTypes from 'prop-types';
 
 
@@ -30,10 +30,10 @@ function RemoveMemberList(props){
        `}</style>
       <h2>DRINKS ON TAP</h2>
       {props.kegList.map((keg) =>
-        <RemoveKeg beer={keg.beer}
-          brand={keg.brand}
-          percent={keg.percent}
-          cost={keg.cost}
+        <RemoveMember firstName={keg.firstName}
+          lastName={keg.lastName}
+          email={keg.email}
+          notesMaster={keg.notesMaster}
           key={keg.id} />
       )}
 
