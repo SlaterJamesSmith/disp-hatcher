@@ -1,7 +1,8 @@
 import React from 'react';
 import NewKegForm from './NewKegForm';
 import PropTypes from 'prop-types';
-import KegList from './KegList';
+// import KegList from './KegList';
+import RemoveKegList from './RemoveKegList';
 
 class KegControl extends React.Component {
 
@@ -57,6 +58,7 @@ class KegControl extends React.Component {
          `}</style>
         {currentlyVisibleContent}
         {buttonVisible}
+        <RemoveKegList kegList={this.props.removeKegList} />
       </div>
     );
   }

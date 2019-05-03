@@ -16,25 +16,29 @@ class ContentContainer extends React.Component{
           beer: 'The Duff Original IPA',
           brand: 'Duff Beer',
           percent: '100',
-          cost: '5'
+          cost: '5',
+          key: 'mock1'
         },
         {
           beer: 'Duff Love',
           brand: 'Duff Beer',
           percent: '99',
-          cost: '3'
+          cost: '3',
+          key: 'mock2'
         },
         {
           beer: 'Duffy the Vampire Slayer',
           brand: 'Duff Beer',
           percent: '101',
-          cost: '6'
+          cost: '6',
+          key: 'mock3'
         },
         {
           beer: 'Duff and Duffer',
           brand: 'Duff Beer',
           percent: '101',
-          cost: '6'
+          cost: '6',
+          key: 'mock4'
         }
       ]
     };
@@ -83,7 +87,7 @@ class ContentContainer extends React.Component{
         <img src={market}/>
         <Switch>
           <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
-          <Route path='/admin' render={()=><KegControl onNewKegCreation={this.handleAddingNewKegToList} />}/>
+          <Route path='/admin' render={()=><KegControl onNewKegCreation={this.handleAddingNewKegToList} removeKegList={this.state.masterKegList} />} />
           <Route component={Error404} />
         </Switch>
       </div>
