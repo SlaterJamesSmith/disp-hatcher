@@ -27,7 +27,7 @@ class Profiles extends React.Component {
     let currentlyVisibleContent = null;
     let buttonVisible = <button onClick={this.handleShowingForm}>Add New Keg</button>;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <NewMemberForm onNewKegCreation={this.props.onNewKegCreation} onNewKegForm={this.handleHidingForm}/>;
+      currentlyVisibleContent = <NewMemberForm onNewMemberCreation={this.props.onNewMemberCreation} onNewKegForm={this.handleHidingForm}/>;
       buttonVisible = null;
     }
     return (
@@ -58,7 +58,7 @@ class Profiles extends React.Component {
          `}</style>
         {currentlyVisibleContent}
         {buttonVisible}
-        <RemoveMemberList kegList={this.props.removeKegList} />
+        <RemoveMemberList memberList={this.props.removeMemberList} />
       </div>
     );
   }

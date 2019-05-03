@@ -76,7 +76,7 @@ class ContentContainer extends React.Component{
          `}</style>
         <Switch>
           <Route exact path='/' render={()=><Dispatcher memberList={this.state.masterMemberList} />} />
-          <Route path='/admin' render={()=><Profiles onNewKegCreation={this.handleAddingNewMemberToList} removeKegList={this.state.masterMemberList} />} />
+          <Route path='/admin' render={()=><Profiles onNewMemberCreation={this.handleAddingNewMemberToList} removeMemberList={this.state.masterMemberList} />} />
           <Route component={Error404} />
         </Switch>
       </div>

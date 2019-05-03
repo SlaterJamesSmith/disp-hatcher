@@ -9,10 +9,10 @@ function NewMemberForm(props){
   let _notesMaster = null;
   let _formVisibleOnPage = true;
 
-  function handleNewKegFormSubmission(event) {
+  function handleNewMemberFormSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({firstName: _firstName.value, lastName: _lastName.value, email: _email.value, notesMaster: _notesMaster.value, id: v4()});
-    props.onNewKegForm({formVisibleOnPage: _formVisibleOnPage});
+    props.onNewMemberCreation({firstName: _firstName.value, lastName: _lastName.value, email: _email.value, notesMaster: _notesMaster.value, id: v4()});
+    props.onNewMemberForm({formVisibleOnPage: _formVisibleOnPage});
     _firstName.value = '';
     _lastName.value = '';
     _email.value = '';
@@ -22,7 +22,7 @@ function NewMemberForm(props){
 
   function handleCancel(event) {
     event.preventDefault();
-    props.onNewKegForm({formVisibleOnPage: _formVisibleOnPage});
+    props.onNewMemberForm({formVisibleOnPage: _formVisibleOnPage});
     _formVisibleOnPage = false;
   }
 
@@ -33,7 +33,7 @@ function NewMemberForm(props){
         display: block;
       }
      `}</style>
-      <form onSubmit={handleNewKegFormSubmission}>
+   <form onSubmit={handleNewMemberFormSubmission}>
         <li><input
           type='text'
           id='firstName'
@@ -62,8 +62,8 @@ function NewMemberForm(props){
 }
 
 NewMemberForm.propTypes = {
-  onNewKegCreation: PropTypes.func,
-  onNewKegForm: PropTypes.func
+  onNewMemberCreation: PropTypes.func,
+  onNewMemberForm: PropTypes.func
 };
 
 export default NewMemberForm;
