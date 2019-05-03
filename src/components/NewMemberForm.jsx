@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 
-function NewKegForm(props){
+function NewMemberForm(props){
   let _beer = null;
   let _brand = null;
   let _percent = null;
@@ -61,9 +61,9 @@ function NewKegForm(props){
   );
 }
 
-NewKegForm.propTypes = {
+NewMemberForm.propTypes = {
   onNewKegCreation: PropTypes.func,
   onNewKegForm: PropTypes.func
 };
 
-export default NewKegForm;
+export default NewMemberForm;

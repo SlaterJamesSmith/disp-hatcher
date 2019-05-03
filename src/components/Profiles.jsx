@@ -1,5 +1,5 @@
 import React from 'react';
-import NewKegForm from './NewKegForm';
+import NewMemberForm from './NewMemberForm';
 import PropTypes from 'prop-types';
 // import KegList from './KegList';
 import RemoveKegList from './RemoveKegList';
@@ -27,7 +27,7 @@ class Profiles extends React.Component {
     let currentlyVisibleContent = null;
     let buttonVisible = <button onClick={this.handleShowingForm}>Add New Keg</button>;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <NewKegForm onNewKegCreation={this.props.onNewKegCreation} onNewKegForm={this.handleHidingForm}/>;
+      currentlyVisibleContent = <NewMemberForm onNewKegCreation={this.props.onNewKegCreation} onNewKegForm={this.handleHidingForm}/>;
       buttonVisible = null;
     }
     return (
