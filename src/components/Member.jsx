@@ -24,7 +24,7 @@ function Member(props){
       <ul>
         <li><h3>{props.firstName} / {props.lastName}</h3></li>
         <li></li>
-        <li><p>ABV: {props.email}%</p></li>
+        <li><p>{props.email}%</p></li>
         <li><p>${props.notesMaster}</p></li>
       </ul>
     </div>
