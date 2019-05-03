@@ -10,7 +10,7 @@ class ContentContainer extends React.Component{
   super(props);
     this.state = {
       formVisibleOnPage: false,
-      masterKegList: [
+      masterMemberList: [
         {
           firstName: 'The Duff Original IPA',
           lastName: 'Duff Beer',
@@ -45,9 +45,9 @@ class ContentContainer extends React.Component{
   }
 
   handleAddingNewKegToList(newKeg){
-    var newMasterKegList = this.state.masterKegList.slice();
-    newMasterKegList.push(newKeg);
-    this.setState({masterKegList: newMasterKegList});
+    var newMasterMemberList = this.state.masterMemberList.slice();
+    newMasterMemberList.push(newKeg);
+    this.setState({masterMemberList: newMasterMemberList});
   }
 
   render(){
@@ -75,8 +75,8 @@ class ContentContainer extends React.Component{
           }
          `}</style>
         <Switch>
-          <Route exact path='/' render={()=><Dispatcher kegList={this.state.masterKegList} />} />
-          <Route path='/admin' render={()=><Profiles onNewKegCreation={this.handleAddingNewKegToList} removeKegList={this.state.masterKegList} />} />
+          <Route exact path='/' render={()=><Dispatcher kegList={this.state.masterMemberList} />} />
+          <Route path='/admin' render={()=><Profiles onNewKegCreation={this.handleAddingNewKegToList} removeKegList={this.state.masterMemberList} />} />
           <Route component={Error404} />
         </Switch>
       </div>
