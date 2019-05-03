@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Keg(props){
+function Member(props){
   return (
     <div>
       <style jsx>{`
@@ -31,11 +31,11 @@ function Keg(props){
   );
 }
 
-Keg.propTypes = {
+Member.propTypes = {
   beer: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   percent: PropTypes.string.isRequired,
   cost: PropTypes.string.isRequired
 };
 
-export default Keg;
+export default Member;

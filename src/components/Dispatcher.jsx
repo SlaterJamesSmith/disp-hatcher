@@ -1,5 +1,5 @@
 import React from 'react';
-import Keg from './Keg';
+import Member from './Member';
 import PropTypes from 'prop-types';
 
 
@@ -30,7 +30,7 @@ function Dispatcher(props){
        `}</style>
       <h2>DRINKS ON TAP</h2>
       {props.kegList.map((keg) =>
-        <Keg beer={keg.beer}
+        <Member beer={keg.beer}
           brand={keg.brand}
           percent={keg.percent}
           cost={keg.cost}
