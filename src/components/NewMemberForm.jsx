@@ -37,22 +37,22 @@ function NewMemberForm(props){
         <li><input
           type='text'
           id='firstName'
-          placeholder='Beer Name'
+          placeholder='First Name'
           ref={(input) => {_firstName = input;}}/></li>
         <li><input
           type='text'
           id='lastName'
-          placeholder='Brand'
+          placeholder='Last Name'
           ref={(input) => {_lastName = input;}}/></li>
         <li><input
           type='text'
           id='email'
-          placeholder='Percentage'
+          placeholder='Email'
           ref={(input) => {_email = input;}}/></li>
         <li><input
           type='text'
           id='notesMaster'
-          placeholder='Cost'
+          placeholder='Notes'
           ref={(input) => {_notesMaster = input;}}/></li>
         <button type='submit'>Submit</button>
         <button type='submit' onClick={handleCancel}>Cancel</button>

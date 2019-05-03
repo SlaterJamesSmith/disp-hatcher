@@ -5,27 +5,29 @@ function Member(props){
   return (
     <div>
       <style jsx>{`
-         div {
-           background-color: lightgreen;
-           font-family: arial;
-           background-color: skyblue;
-           color: darkblue;
-         }
-         ul {
-           padding: 8px;
-           border: 3px solid darkblue;
-         }
-         li {
-           display: block;
-           padding: 0;
-           margin-top: -10px;;
-         }
+        div {
+          font-family: arial;
+          background-color: lightgrey;
+          color: black;
+        }
+        ul {
+          padding: 8px;
+          border: 3px solid grey;
+        }
+        li {
+          display: block;
+          padding: 0;
+          margin-top: -10px;
+        }
+        span {
+          color: gray;
+        }
        `}</style>
       <ul>
-        <li><h3>{props.firstName} / {props.lastName}</h3></li>
+        <li><h3>{props.firstName} {props.lastName}</h3></li>
         <li></li>
-        <li><p>{props.email}%</p></li>
-        <li><p>${props.notesMaster}</p></li>
+        <li><p>{props.email}</p></li>
+        <li><p><span>notes: {props.notesMaster}</span></p></li>
       </ul>
     </div>
   );

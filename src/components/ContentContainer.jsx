@@ -12,31 +12,31 @@ class ContentContainer extends React.Component{
       formVisibleOnPage: false,
       masterMemberList: [
         {
-          firstName: 'The Duff Original IPA',
-          lastName: 'Duff Beer',
-          email: '100',
-          notesMaster: '5',
+          firstName: 'Jack',
+          lastName: 'Ofalltrades',
+          email: 'BeNimble420@gmail.com',
+          notesMaster: '',
           key: 'mock1'
         },
         {
-          firstName: 'Duff Love',
-          lastName: 'Duff Beer',
-          email: '99',
-          notesMaster: '3',
+          firstName: 'Jane',
+          lastName: 'Jee-eye',
+          email: 'hooya@yahoo.com',
+          notesMaster: 'likes early shifts',
           key: 'mock2'
         },
         {
-          firstName: 'Duffy the Vampire Slayer',
-          lastName: 'Duff Beer',
-          email: '101',
-          notesMaster: '6',
+          firstName: 'Carl',
+          lastName: 'Mell',
+          email: 'ilikecandy@hotmail.com',
+          notesMaster: '',
           key: 'mock3'
         },
         {
-          firstName: 'Duff and Duffer',
-          lastName: 'Duff Beer',
-          email: '101',
-          notesMaster: '6',
+          firstName: 'Sarah',
+          lastName: 'Sander',
+          email: 'woodshopismyjam@auntiesarahwoodworking.com',
+          notesMaster: '',
           key: 'mock4'
         }
       ]

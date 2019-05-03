@@ -1,7 +1,7 @@
 import React from 'react';
 import NewMemberForm from './NewMemberForm';
 import PropTypes from 'prop-types';
-// import KegList from './KegList';
+// import MemberList from './MemberList';
 import RemoveMemberList from './RemoveMemberList';
 
 class Profiles extends React.Component {
@@ -25,9 +25,9 @@ class Profiles extends React.Component {
 
   render(){
     let currentlyVisibleContent = null;
-    let buttonVisible = <button onClick={this.handleShowingForm}>Add New Keg</button>;
+    let buttonVisible = <button onClick={this.handleShowingForm}>Add Member</button>;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <NewMemberForm onNewMemberCreation={this.props.onNewMemberCreation} onNewKegForm={this.handleHidingForm}/>;
+      currentlyVisibleContent = <NewMemberForm onNewMemberCreation={this.props.onNewMemberCreation} onNewMemberForm={this.handleHidingForm}/>;
       buttonVisible = null;
     }
     return (

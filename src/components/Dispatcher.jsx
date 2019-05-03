@@ -13,10 +13,10 @@ function Dispatcher(props){
            font-family: arial;
          }
          h2 {
-           background-color: darkblue;
+           background-color: lightgreen;
            padding: 10px;
-           color: skyblue;
-           border: 3px solid skyblue;
+           color: forestgreen;
+           border: 3px solid forestgreen;
            text-align: center;
          }
          ul {
@@ -28,7 +28,7 @@ function Dispatcher(props){
            margin-bottom: 0;
          }
        `}</style>
-      <h2>DRINKS ON TAP</h2>
+     <h2>Sort Buttons Here</h2>
       {props.memberList.map((member) =>
         <Member firstName={member.firstName}
           lastName={member.lastName}
