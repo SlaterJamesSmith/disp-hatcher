@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import fruitStand from '../assets/images/fruitstand.jpeg';
 
 function Navbar(){
   var styledNavbar = {
@@ -9,34 +8,39 @@ function Navbar(){
     paddingTop: '10px',
     paddingBottom: '50px',
     color: 'white',
-    fontFamily: 'arial',
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
+    backgroundColor: 'lightgrey',
     height: '200px',
     padding: '0',
-    backgroundImage: 'url(' + fruitStand + ')',
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
-    textShadow: '0px 0px 20px black',
+    // textShadow: '0px 0px 20px black',
     borderBottom: '5px black solid'
   };
   var styledHeader = {
     fontSize: '40px',
     paddingBottom: '0',
-    marginBottom: '10px'
+    marginBottom: '10px',
+    fontFamily: 'georgia',
+    fontStyle: 'italic',
+    color: 'grey'
   };
   var styledLink = {
     color: 'white',
     textDecoration: 'none',
     fontSize: '20px',
-    textShadow: '0px 0px 20px black',
+    fontFamily: 'helvetica',
+    fontWeight: '100',
+    color: 'forestgreen'
+    // textShadow: '0px 0px 20px black',
   };
   return (
     <div style={styledNavbar}>
-      <h1 style={styledHeader}>Tap List App</h1>
+      <h1 style={styledHeader}>DispHatcher</h1>
       <span>
-        <Link style={styledLink} to="/">list</Link> | <Link style={styledLink} to="/admin">admin</Link>
+        <Link style={styledLink} to="/">list</Link> | <Link style={styledLink} to="/admin">profiles</Link>
       </span>
     </div>
   );
