@@ -1,5 +1,5 @@
 import React from 'react';
-import KegList from './KegList';
+import Dispatcher from './Dispatcher';
 import { Switch, Route } from 'react-router-dom';
 import Profiles from './Profiles';
 import Error404 from './Error404';
@@ -75,7 +75,7 @@ class ContentContainer extends React.Component{
           }
          `}</style>
         <Switch>
-          <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
+          <Route exact path='/' render={()=><Dispatcher kegList={this.state.masterKegList} />} />
           <Route path='/admin' render={()=><Profiles onNewKegCreation={this.handleAddingNewKegToList} removeKegList={this.state.masterKegList} />} />
           <Route component={Error404} />
         </Switch>

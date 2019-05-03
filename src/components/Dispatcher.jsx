@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 
-function KegList(props){
+function Dispatcher(props){
   return (
     <div>
       <style jsx>{`
@@ -41,4 +41,4 @@ function KegList(props){
   );
 }
 
-export default KegList;
+export default Dispatcher;
