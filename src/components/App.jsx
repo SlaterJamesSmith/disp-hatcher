@@ -13,7 +13,7 @@ function App(){
       <style jsx global >{`
          body {
            margin: 0;
-           background-color: khaki;
+           background-color: darkgray;
          }
        `}</style>
       <Navbar/>

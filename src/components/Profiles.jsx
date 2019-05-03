@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // import KegList from './KegList';
 import RemoveKegList from './RemoveKegList';
 
-class KegControl extends React.Component {
+class Profiles extends React.Component {
 
   constructor(props) {
     super(props);
@@ -64,8 +64,8 @@ class KegControl extends React.Component {
   }
 }
 
-KegControl.propTypes = {
+Profiles.propTypes = {
   formVisibleOnPage: PropTypes.func
 };
 
-export default KegControl;
+export default Profiles;
