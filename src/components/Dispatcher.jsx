@@ -29,12 +29,12 @@ function Dispatcher(props){
          }
        `}</style>
       <h2>DRINKS ON TAP</h2>
-      {props.kegList.map((keg) =>
-        <Member firstName={keg.firstName}
-          lastName={keg.lastName}
-          email={keg.email}
-          notesMaster={keg.notesMaster}
-          key={keg.id} />
+      {props.memberList.map((member) =>
+        <Member firstName={member.firstName}
+          lastName={member.lastName}
+          email={member.email}
+          notesMaster={member.notesMaster}
+          key={member.id} />
       )}
 
     </div>
