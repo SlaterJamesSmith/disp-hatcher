@@ -41,12 +41,12 @@ class ContentContainer extends React.Component{
         }
       ]
     };
-    this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
+    this.handleAddingNewMemberToList = this.handleAddingNewMemberToList.bind(this);
   }
 
-  handleAddingNewKegToList(newKeg){
+  handleAddingNewMemberToList(newMember){
     var newMasterMemberList = this.state.masterMemberList.slice();
-    newMasterMemberList.push(newKeg);
+    newMasterMemberList.push(newMember);
     this.setState({masterMemberList: newMasterMemberList});
   }
 
@@ -76,7 +76,7 @@ class ContentContainer extends React.Component{
          `}</style>
         <Switch>
           <Route exact path='/' render={()=><Dispatcher kegList={this.state.masterMemberList} />} />
-          <Route path='/admin' render={()=><Profiles onNewKegCreation={this.handleAddingNewKegToList} removeKegList={this.state.masterMemberList} />} />
+          <Route path='/admin' render={()=><Profiles onNewKegCreation={this.handleAddingNewMemberToList} removeKegList={this.state.masterMemberList} />} />
           <Route component={Error404} />
         </Switch>
       </div>
