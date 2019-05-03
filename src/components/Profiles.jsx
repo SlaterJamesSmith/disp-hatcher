@@ -2,7 +2,7 @@ import React from 'react';
 import NewMemberForm from './NewMemberForm';
 import PropTypes from 'prop-types';
 // import KegList from './KegList';
-import RemoveKegList from './RemoveKegList';
+import RemoveMemberList from './RemoveMemberList';
 
 class Profiles extends React.Component {
 
@@ -58,7 +58,7 @@ class Profiles extends React.Component {
          `}</style>
         {currentlyVisibleContent}
         {buttonVisible}
-        <RemoveKegList kegList={this.props.removeKegList} />
+        <RemoveMemberList kegList={this.props.removeKegList} />
       </div>
     );
   }

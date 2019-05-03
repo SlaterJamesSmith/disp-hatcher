@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 
-function RemoveKegList(props){
+function RemoveMemberList(props){
   return (
     <div>
       <style jsx>{`
@@ -41,4 +41,4 @@ function RemoveKegList(props){
   );
 }
 
-export default RemoveKegList;
+export default RemoveMemberList;
