@@ -1,5 +1,5 @@
 ## React DispHatcher
-#### _Epicodus Capstone Project, 3/27/19_
+#### _Epicodus Capstone Project, 5/3/19_
 
 #### Slater Smith
 
