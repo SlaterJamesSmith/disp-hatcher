@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
+import { connect } from 'react-redux';
 
 function NewMemberForm(props){
-  console.log(props);
   let _firstName = null;
   let _lastName = null;
   let _email = null;
@@ -11,8 +11,18 @@ function NewMemberForm(props){
   let _formVisibleOnPage = true;
 
   function handleNewMemberFormSubmission(event) {
+    const { dispatch } = props;
     event.preventDefault();
-    props.onNewMemberCreation({firstName: _firstName.value, lastName: _lastName.value, email: _email.value, notesMaster: _notesMaster.value, id: v4()});
+    const action = {
+      type: 'ADD_MEMBER',
+      id: null,
+      firstName: firstName.value,
+      lastName: lastName.value,
+      email: email.value,
+      notesMaster: notesMaster.value
+    };
+    dispatch(action);
+    // props.onNewMemberCreation({firstName: _firstName.value, lastName: _lastName.value, email: _email.value, notesMaster: _notesMaster.value, id: v4()});
     props.onNewMemberForm({formVisibleOnPage: _formVisibleOnPage});
     _firstName.value = '';
     _lastName.value = '';
@@ -62,9 +72,11 @@ function NewMemberForm(props){
   );
 }
 
-NewMemberForm.propTypes = {
-  onNewMemberCreation: PropTypes.func,
-  onNewMemberForm: PropTypes.func
-};
+// NewMemberForm.propTypes = {
+//   onNewMemberCreation: PropTypes.func,
+//   onNewMemberForm: PropTypes.func
+// };
 
-export default NewMemberForm;
+// NewMemberForm = connect()(NewMemberForm);
+
+export default connect()(NewMemberForm);

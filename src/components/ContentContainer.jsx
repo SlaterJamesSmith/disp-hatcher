@@ -57,10 +57,6 @@ class ContentContainer extends React.Component{
     newMasterMemberList.forEach((masterMember, index) => {
       if (masterMember.id === removeMemberId) {
         newMasterMemberList.splice(index, 1)
-        console.log(index);
-        console.log(index + 1);
-        console.log(removeMemberId);
-        console.log(newMasterMemberList);
         }
       })
     this.setState({masterMemberList: newMasterMemberList});
