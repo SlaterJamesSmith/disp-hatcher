@@ -2,6 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function RemoveMember(props){
+
+  console.log(props);
+
+    function handleRemoveMember(event) {
+    event.preventDefault();
+    props.onRemoveMember(props.id);
+    // props.onRemoveMember({id: _id});
+    _id = props.id;
+    console.log(props.id);
+  }
   return (
     <div>
       <style jsx>{`
@@ -25,8 +35,8 @@ function RemoveMember(props){
         <li></li>
         <li><p>{props.email}</p></li>
         <li><p>notes: {props.notesMaster}</p></li>
-        <button id={props.id}>Remove {props.id}</button>
-        <button id={props.id}>Edit {props.id}</button>
+        <button onClick={handleRemoveMember}>Remove</button>
+        <button>Edit</button>
       </ul>
     </div>
   );

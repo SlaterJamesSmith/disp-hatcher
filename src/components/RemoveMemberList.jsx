@@ -30,11 +30,13 @@ function RemoveMemberList(props){
        `}</style>
      <h2>MEMBER SORTING OPTIONS GO HERE</h2>
       {props.memberList.map((member) =>
-        <RemoveMember firstName={member.firstName}
+        <RemoveMember
+          onRemoveMember={props.onRemoveMember}
+          firstName={member.firstName}
           lastName={member.lastName}
           email={member.email}
           notesMaster={member.notesMaster}
-          key={member.id} />
+          id={member.id} />
       )}
 
     </div>

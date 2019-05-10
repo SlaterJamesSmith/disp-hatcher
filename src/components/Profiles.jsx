@@ -58,7 +58,7 @@ class Profiles extends React.Component {
          `}</style>
         {currentlyVisibleContent}
         {buttonVisible}
-        <RemoveMemberList memberList={this.props.removeMemberList} />
+        <RemoveMemberList onRemoveMember={this.props.onRemoveMember} memberList={this.props.removeMemberList} />
       </div>
     );
   }

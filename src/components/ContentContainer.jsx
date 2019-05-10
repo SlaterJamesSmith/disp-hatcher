@@ -16,37 +16,51 @@ class ContentContainer extends React.Component{
           lastName: 'Ofalltrades',
           email: 'BeNimble420@gmail.com',
           notesMaster: '',
-          key: 'mock1'
+          id: 'mock1'
         },
         {
           firstName: 'Jane',
           lastName: 'Jee-eye',
           email: 'hooya@yahoo.com',
           notesMaster: 'likes early shifts',
-          key: 'mock2'
+          id: 'mock2'
         },
         {
           firstName: 'Carl',
           lastName: 'Mell',
           email: 'ilikecandy@hotmail.com',
           notesMaster: '',
-          key: 'mock3'
+          id: 'mock3'
         },
         {
           firstName: 'Sarah',
           lastName: 'Sander',
           email: 'woodshopismyjam@auntiesarahwoodworking.com',
           notesMaster: '',
-          key: 'mock4'
+          id: 'mock4'
         }
       ]
     };
+    this.handleRemoveMemberFromList = this.handleRemoveMemberFromList.bind(this);
     this.handleAddingNewMemberToList = this.handleAddingNewMemberToList.bind(this);
   }
 
   handleAddingNewMemberToList(newMember){
     var newMasterMemberList = this.state.masterMemberList.slice();
     newMasterMemberList.push(newMember);
+    this.setState({masterMemberList: newMasterMemberList});
+  }
+
+  handleRemoveMemberFromList(removeMemberId){
+
+    var newMasterMemberList = this.state.masterMemberList.slice();
+    newMasterMemberList.forEach((masterMember, index) => {
+      if (masterMember.id === removeMemberId) {
+        console.log(masterMember.id)
+        console.log(index)
+        newMasterMemberList.splice(index, index + 1)
+        }
+      })
     this.setState({masterMemberList: newMasterMemberList});
   }
 
@@ -76,7 +90,7 @@ class ContentContainer extends React.Component{
          `}</style>
         <Switch>
           <Route exact path='/' render={()=><Dispatcher memberList={this.state.masterMemberList} />} />
-          <Route path='/admin' render={()=><Profiles onNewMemberCreation={this.handleAddingNewMemberToList} removeMemberList={this.state.masterMemberList} />} />
+          <Route path='/admin' render={()=><Profiles onNewMemberCreation={this.handleAddingNewMemberToList} removeMemberList={this.state.masterMemberList} onRemoveMember={this.handleRemoveMemberFromList} />} />
           <Route component={Error404} />
         </Switch>
       </div>
