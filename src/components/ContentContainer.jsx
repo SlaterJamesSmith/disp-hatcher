@@ -99,9 +99,9 @@ class ContentContainer extends React.Component{
           }
          `}</style>
         <Switch>
-          <Route exact path='/' render={()=><Dispatcher memberList={this.state.masterMemberList} />} />
-          <Route exact path='/job-builder' render={()=><JobBuilder memberList={this.state.masterMemberList} />} />
-          <Route path='/admin' render={()=><Profiles removeMemberList={this.state.masterMemberList} onRemoveMember={this.handleRemoveMemberFromList} />} />
+          <Route exact path='/' render={()=><Dispatcher memberList={this.props.masterMemberList} />} />
+          <Route exact path='/job-builder' render={()=><JobBuilder memberList={this.props.masterMemberList} />} />
+          <Route path='/admin' render={()=><Profiles removeMemberList={this.props.masterMemberList} onRemoveMember={this.handleRemoveMemberFromList} />} />
           <Route component={Error404} />
         </Switch>
       </div>
@@ -120,4 +120,4 @@ const mapStateToProps = state => {
   }
 };
 
-export default withRouter(connect()(ContentContainer));
+export default withRouter(connect(mapStateToProps)(ContentContainer));
