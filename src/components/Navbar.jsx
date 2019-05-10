@@ -40,7 +40,7 @@ function Navbar(){
     <div style={styledNavbar}>
       <h1 style={styledHeader}>DispHatcher</h1>
       <span>
-        <Link style={styledLink} to="/">dispatcher</Link> | <Link style={styledLink} to="/admin">profiles</Link>
+        <Link style={styledLink} to="/">dispatcher</Link> | <Link style={styledLink} to="/job-builder">job builder</Link> | <Link style={styledLink} to="/admin">profiles</Link>
       </span>
     </div>
   );

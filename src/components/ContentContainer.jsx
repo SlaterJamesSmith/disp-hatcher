@@ -1,13 +1,17 @@
 import React from 'react';
 import Dispatcher from './Dispatcher';
-import { Switch, Route } from 'react-router-dom';
+import JobBuilder from './JobBuilder';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import Profiles from './Profiles';
 import Error404 from './Error404';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class ContentContainer extends React.Component{
 
   constructor(props) {
   super(props);
+  console.log(props);
     this.state = {
       formVisibleOnPage: false,
       masterMemberList: [
@@ -62,6 +66,14 @@ class ContentContainer extends React.Component{
     this.setState({masterMemberList: newMasterMemberList});
   }
 
+
+// The following code should be implemented once I figure out how to store mock data in redux this.state
+  // <Switch>
+  //   <Route exact path='/' render={()=><Dispatcher memberList={this.state.masterMemberList} />} />
+  //   <Route path='/admin' render={()=><Profiles removeMemberList={this.state.masterMemberList} onRemoveMember={this.handleRemoveMemberFromList} />} />
+  //   <Route component={Error404} />
+  // </Switch>
+
   render(){
     return (
       <div>
@@ -88,6 +100,7 @@ class ContentContainer extends React.Component{
          `}</style>
         <Switch>
           <Route exact path='/' render={()=><Dispatcher memberList={this.state.masterMemberList} />} />
+          <Route exact path='/job-builder' render={()=><JobBuilder memberList={this.state.masterMemberList} />} />
           <Route path='/admin' render={()=><Profiles removeMemberList={this.state.masterMemberList} onRemoveMember={this.handleRemoveMemberFromList} />} />
           <Route component={Error404} />
         </Switch>
@@ -96,4 +109,15 @@ class ContentContainer extends React.Component{
   }
 }
 
-export default ContentContainer;
+
+ContentContainer.propTypes = {
+  masterMemberList: PropTypes.object
+};
+
+const mapStateToProps = state => {
+  return {
+    masterMemberList: state
+  }
+};
+
+export default withRouter(connect()(ContentContainer));
