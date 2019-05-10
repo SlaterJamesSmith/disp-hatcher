@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function RemoveMember(props){
+  let _id = null;
 
 
     function handleRemoveMember(event) {
