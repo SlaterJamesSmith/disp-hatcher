@@ -4,10 +4,10 @@ import App from './components/App';
 import { AppContainer } from 'react-hot-loader';
 import { HashRouter } from 'react-router-dom';
 import { createStore } from 'redux';
-import dispatchReducer from './reducers/dispatch-reducer';
+import dispatcherReducer from './reducers/dispatcher-reducer';
 import { Provider } from 'react-redux';
 
-const store = createStore(dispatchReducer);
+const store = createStore(dispatcherReducer);
 
 const render = (Component) => {
   ReactDOM.render(
