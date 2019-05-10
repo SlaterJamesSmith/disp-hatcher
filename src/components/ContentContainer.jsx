@@ -42,14 +42,14 @@ class ContentContainer extends React.Component{
       ]
     };
     this.handleRemoveMemberFromList = this.handleRemoveMemberFromList.bind(this);
-    this.handleAddingNewMemberToList = this.handleAddingNewMemberToList.bind(this);
+    // this.handleAddingNewMemberToList = this.handleAddingNewMemberToList.bind(this);
   }
 
-  handleAddingNewMemberToList(newMember){
-    var newMasterMemberList = this.state.masterMemberList.slice();
-    newMasterMemberList.push(newMember);
-    this.setState({masterMemberList: newMasterMemberList});
-  }
+  // handleAddingNewMemberToList(newMember){
+  //   var newMasterMemberList = this.state.masterMemberList.slice();
+  //   newMasterMemberList.push(newMember);
+  //   this.setState({masterMemberList: newMasterMemberList});
+  // }
 
   handleRemoveMemberFromList(removeMemberId){
 
@@ -88,7 +88,7 @@ class ContentContainer extends React.Component{
          `}</style>
         <Switch>
           <Route exact path='/' render={()=><Dispatcher memberList={this.state.masterMemberList} />} />
-          <Route path='/admin' render={()=><Profiles onNewMemberCreation={this.handleAddingNewMemberToList} removeMemberList={this.state.masterMemberList} onRemoveMember={this.handleRemoveMemberFromList} />} />
+          <Route path='/admin' render={()=><Profiles removeMemberList={this.state.masterMemberList} onRemoveMember={this.handleRemoveMemberFromList} />} />
           <Route component={Error404} />
         </Switch>
       </div>

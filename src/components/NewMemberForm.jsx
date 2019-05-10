@@ -15,7 +15,7 @@ function NewMemberForm(props){
     event.preventDefault();
     const action = {
       type: 'ADD_MEMBER',
-      id: null,
+      id: v4(),
       firstName: firstName.value,
       lastName: lastName.value,
       email: email.value,

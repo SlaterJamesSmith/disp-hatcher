@@ -27,7 +27,7 @@ class Profiles extends React.Component {
     let currentlyVisibleContent = null;
     let buttonVisible = <button onClick={this.handleShowingForm}>Add Member</button>;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <NewMemberForm onNewMemberCreation={this.props.onNewMemberCreation} onNewMemberForm={this.handleHidingForm}/>;
+      currentlyVisibleContent = <NewMemberForm onNewMemberForm={this.handleHidingForm}/>;
       buttonVisible = null;
     }
     return (
