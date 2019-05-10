@@ -1,7 +1,9 @@
+import dispatcherReducer from './..src/reducers/dispatcher-reducer'
+
 describe('dispatcherReducer', () => {
 
-  test('Temporary dummy test: two plus two is zero', () => {
-    expect(2 + 2).toBe(0);
+  test('Should return default state if no action type is recognized', () => {
+    expect(ticketListReducer({}, { type: null })).toEqual({});
   });
 
 });
