@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 
 function NewMemberForm(props){
+  console.log(props);
   let _firstName = null;
   let _lastName = null;
   let _email = null;

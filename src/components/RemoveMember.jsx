@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 
 function RemoveMember(props){
 
-  console.log(props);
 
     function handleRemoveMember(event) {
     event.preventDefault();
     props.onRemoveMember(props.id);
     // props.onRemoveMember({id: _id});
     _id = props.id;
-    console.log(props.id);
   }
   return (
     <div>
