@@ -9,45 +9,45 @@ import PropTypes from 'prop-types';
 
 class ContentContainer extends React.Component{
 
-  constructor(props) {
-  super(props);
-  console.log(props);
-    this.state = {
-      formVisibleOnPage: false,
-      masterMemberList: [
-        {
-          firstName: 'Jack',
-          lastName: 'Ofalltrades',
-          email: 'BeNimble420@gmail.com',
-          notesMaster: '',
-          id: 'mock1'
-        },
-        {
-          firstName: 'Jane',
-          lastName: 'Jee-eye',
-          email: 'hooya@yahoo.com',
-          notesMaster: 'likes early shifts',
-          id: 'mock2'
-        },
-        {
-          firstName: 'Carl',
-          lastName: 'Mell',
-          email: 'ilikecandy@hotmail.com',
-          notesMaster: '',
-          id: 'mock3'
-        },
-        {
-          firstName: 'Sarah',
-          lastName: 'Sander',
-          email: 'woodshopismyjam@auntiesarahwoodworking.com',
-          notesMaster: '',
-          id: 'mock4'
-        }
-      ]
-    };
-    this.handleRemoveMemberFromList = this.handleRemoveMemberFromList.bind(this);
-    // this.handleAddingNewMemberToList = this.handleAddingNewMemberToList.bind(this);
-  }
+  // constructor(props) {
+  // super(props);
+  // console.log(props);
+  //   this.state = {
+  //     formVisibleOnPage: false,
+  //     masterMemberList: [
+  //       {
+  //         firstName: 'Jack',
+  //         lastName: 'Ofalltrades',
+  //         email: 'BeNimble420@gmail.com',
+  //         notesMaster: '',
+  //         id: 'mock1'
+  //       },
+  //       {
+  //         firstName: 'Jane',
+  //         lastName: 'Jee-eye',
+  //         email: 'hooya@yahoo.com',
+  //         notesMaster: 'likes early shifts',
+  //         id: 'mock2'
+  //       },
+  //       {
+  //         firstName: 'Carl',
+  //         lastName: 'Mell',
+  //         email: 'ilikecandy@hotmail.com',
+  //         notesMaster: '',
+  //         id: 'mock3'
+  //       },
+  //       {
+  //         firstName: 'Sarah',
+  //         lastName: 'Sander',
+  //         email: 'woodshopismyjam@auntiesarahwoodworking.com',
+  //         notesMaster: '',
+  //         id: 'mock4'
+  //       }
+  //     ]
+  //   };
+  //   this.handleRemoveMemberFromList = this.handleRemoveMemberFromList.bind(this);
+  //   // this.handleAddingNewMemberToList = this.handleAddingNewMemberToList.bind(this);
+  // }
 
   // handleAddingNewMemberToList(newMember){
   //   var newMasterMemberList = this.state.masterMemberList.slice();

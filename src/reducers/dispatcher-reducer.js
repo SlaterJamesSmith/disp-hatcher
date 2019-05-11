@@ -41,6 +41,8 @@ action) => {
         id: id
       }
     });
+    console.log(state)
+    console.log(newState);
     return newState;
   default:
     return state;
