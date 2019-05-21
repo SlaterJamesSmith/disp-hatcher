@@ -8,6 +8,10 @@ function NewMemberForm(props){
   let _lastName = null;
   let _email = null;
   let _notesMaster = null;
+  let _proficiencies = null;
+  let _exclusions = null;
+  let _hireDate = null;
+  let _listNumber = null;
   let _formVisibleOnPage = true;
 
   function handleNewMemberFormSubmission(event) {
@@ -19,7 +23,11 @@ function NewMemberForm(props){
       firstName: firstName.value,
       lastName: lastName.value,
       email: email.value,
-      notesMaster: notesMaster.value
+      notesMaster: notesMaster.value,
+      proficiencies: proficiencies.value,
+      exclusions: exclusions.value,
+      hireDate: hireDate.value,
+      listNumber: listNumber.value
     };
     dispatch(action);
     // props.onNewMemberCreation({firstName: _firstName.value, lastName: _lastName.value, email: _email.value, notesMaster: _notesMaster.value, id: v4()});
@@ -28,6 +36,10 @@ function NewMemberForm(props){
     _lastName.value = '';
     _email.value = '';
     _notesMaster.value = '';
+    _proficiencies.value = '';
+    _exclusions.value = '';
+    _hireDate.value = '';
+    _listNumber.value = 0;
     _formVisibleOnPage = true;
   }
 
@@ -60,6 +72,26 @@ function NewMemberForm(props){
           id='email'
           placeholder='Email'
           ref={(input) => {_email = input;}}/></li>
+        <li><input
+          type='text'
+          id='proficiencies'
+          placeholder='Proficiencies'
+          ref={(input) => {_proficiencies = input;}}/></li>
+        <li><input
+          type='text'
+          id='exclusions'
+          placeholder='Exclusions'
+          ref={(input) => {_exclusions = input;}}/></li>
+        <li><input
+          type='text'
+          id='hireDate'
+          placeholder='Hire Date'
+          ref={(input) => {_hireDate = input;}}/></li>
+        <li><input
+          type='text'
+          id='listNumber'
+          placeholder='List Number'
+          ref={(input) => {_listNumber = input;}}/></li>
         <li><input
           type='text'
           id='notesMaster'

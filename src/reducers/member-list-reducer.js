@@ -3,7 +3,7 @@ import c from './../constants';
 export default (state = {},
 action) => {
   let newState;
-  const { firstName, lastName, email, notesMaster, id } = action;
+  const { firstName, lastName, email, exclusions, proficiencies, hireDate, listNumber, notesMaster, id } = action;
 
   switch (action.type) {
   case c.ADD_MEMBER:
@@ -12,6 +12,10 @@ action) => {
         firstName: firstName,
         lastName: lastName,
         email: email,
+        proficiencies: proficiencies,
+        exclusions: exclusions,
+        hireDate: hireDate,
+        listNumber: listNumber,
         notesMaster: notesMaster,
         id: id
       }
