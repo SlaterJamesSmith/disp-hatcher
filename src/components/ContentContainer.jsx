@@ -55,16 +55,16 @@ class ContentContainer extends React.Component{
   //   this.setState({masterMemberList: newMasterMemberList});
   // }
 
-  handleRemoveMemberFromList(removeMemberId){
-
-    var newMasterMemberList = this.state.masterMemberList.slice();
-    newMasterMemberList.forEach((masterMember, index) => {
-      if (masterMember.id === removeMemberId) {
-        newMasterMemberList.splice(index, 1)
-        }
-      })
-    this.setState({masterMemberList: newMasterMemberList});
-  }
+  // handleRemoveMemberFromList(removeMemberId){
+  //
+  //   var newMasterMemberList = this.state.masterMemberList.slice();
+  //   newMasterMemberList.forEach((masterMember, index) => {
+  //     if (masterMember.id === removeMemberId) {
+  //       newMasterMemberList.splice(index, 1)
+  //       }
+  //     })
+  //   this.setState({masterMemberList: newMasterMemberList});
+  // }
 
 
 // The following code should be implemented once I figure out how to store mock data in redux this.state
@@ -116,7 +116,7 @@ ContentContainer.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    masterMemberList: state
+    masterMemberList: state.masterMemberList
   }
 };
 
