@@ -28,16 +28,17 @@ function RemoveMemberList(props){
            margin-bottom: 0;
          }
        `}</style>
-     <h2>MEMBER SORTING OPTIONS GO HERE</h2>
-      {props.memberList.map((member) =>
-        <RemoveMember
+      <h2>MEMBER SORTING OPTIONS GO HERE</h2>
+      {Object.keys(props.memberList).map(function(id) {
+        var member = props.memberList[id];
+        return <RemoveMember
           onRemoveMember={props.onRemoveMember}
           firstName={member.firstName}
           lastName={member.lastName}
           email={member.email}
           notesMaster={member.notesMaster}
           id={member.id} />
-      )}
+      })}
 
     </div>
   );
