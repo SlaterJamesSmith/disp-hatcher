@@ -34,6 +34,10 @@ function JobBuilder(props){
         return <Member firstName={member.firstName}
           lastName={member.lastName}
           email={member.email}
+          proficiencies={member.proficiencies}
+          exclusions={member.exclusions}
+          hireDate={member.hireDate}
+          listNumber={member.listNumber}
           notesMaster={member.notesMaster}
           key={member.id} />
       })}
