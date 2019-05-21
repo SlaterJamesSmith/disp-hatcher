@@ -31,9 +31,14 @@ function Dispatcher(props){
      <h2>Sort Buttons Here</h2>
        {Object.keys(props.memberList).map(function(id) {
          var member = props.memberList[id];
-         return <Member firstName={member.firstName}
+         return <Member
+           firstName={member.firstName}
            lastName={member.lastName}
            email={member.email}
+           proficiencies={member.proficiencies}
+           exclusions={member.exclusions}
+           hireDate={member.hireDate}
+           listNumber={member.listNumber}
            notesMaster={member.notesMaster}
            key={member.id} />
        })}

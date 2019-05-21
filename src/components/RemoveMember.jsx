@@ -48,6 +48,10 @@ function RemoveMember(props){
         <li><h3>{props.firstName} {props.lastName}</h3></li>
         <li></li>
         <li><p>{props.email}</p></li>
+        <li><p><strong>Proficiencies:</strong> {props.proficiencies}</p></li>
+        <li><p><strong>Exclusions:</strong> {props.exclusions}</p></li>
+        <li><p><strong>Hire Date:</strong> {props.hireDate}</p></li>
+        <li><p><strong>List Number:</strong> {props.listNumber}</p></li>
         <li><p>notes: {props.notesMaster}</p></li>
         <button onClick={handleRemoveMember}>Remove</button>
         <button>Edit</button>
