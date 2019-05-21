@@ -84,35 +84,3 @@ action) => {
     return state;
   }
 };
-
-//
-// MOCK DATA
-//
-// {
-//   firstName: 'Jack',
-//   lastName: 'Ofalltrades',
-//   email: 'BeNimble420@gmail.com',
-//   notesMaster: '',
-//   id: 'mock1'
-// },
-// {
-//   firstName: 'Jane',
-//   lastName: 'Jee-eye',
-//   email: 'hooya@yahoo.com',
-//   notesMaster: 'likes early shifts',
-//   id: 'mock2'
-// },
-// {
-//   firstName: 'Carl',
-//   lastName: 'Mell',
-//   email: 'ilikecandy@hotmail.com',
-//   notesMaster: '',
-//   id: 'mock3'
-// },
-// {
-//   firstName: 'Sarah',
-//   lastName: 'Sander',
-//   email: 'woodshopismyjam@auntiesarahwoodworking.com',
-//   notesMaster: '',
-//   id: 'mock4'
-// }

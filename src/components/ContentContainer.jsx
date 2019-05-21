@@ -36,7 +36,7 @@ class ContentContainer extends React.Component{
          `}</style>
         <Switch>
           <Route exact path='/' render={()=><Dispatcher memberList={this.props.masterMemberList} />} />
-          <Route exact path='/job-builder' render={()=><JobBuilder memberList={this.props.masterMemberList} />} />
+          <Route exact path='/job-builder' render={()=><JobBuilder jobList={this.props.masterJobList} jobList={this.props.masterJobList} />} />
           <Route path='/admin' render={()=><Profiles removeMemberList={this.props.masterMemberList} onRemoveMember={this.handleRemoveMemberFromList} />} />
           <Route component={Error404} />
         </Switch>
@@ -52,7 +52,8 @@ ContentContainer.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    masterMemberList: state.masterMemberList
+    masterMemberList: state.masterMemberList,
+    masterJobList: state.masterJobList
   }
 };
 
