@@ -2,10 +2,12 @@ import c from './../constants';
 
 export default (state = {},
 action) => {
+  let newState;
+  const { firstName, lastName, email, notesMaster, id } = action;
+
   switch (action.type) {
   case c.ADD_MEMBER:
-    const { firstName, lastName, email, notesMaster, id } = action;
-    let newState = Object.assign({}, state, {
+    newState = Object.assign({}, state, {
       [id]: {
         firstName: firstName,
         lastName: lastName,
@@ -17,6 +19,12 @@ action) => {
     console.log(state)
     console.log(newState);
     return newState;
+
+    case c.REMOVE_MEMBER:
+      newState = Object.assign({}, state);
+      delete newState[id]
+      return newState
+        
   default:
     return state;
   }
