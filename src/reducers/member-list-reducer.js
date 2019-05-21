@@ -23,8 +23,10 @@ action) => {
     case c.REMOVE_MEMBER:
       newState = Object.assign({}, state);
       delete newState[id]
+      console.log('hello! remove member!');
+      console.log(newState);
       return newState
-        
+
   default:
     return state;
   }

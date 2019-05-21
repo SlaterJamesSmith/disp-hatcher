@@ -1,16 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 function RemoveMember(props){
   let _id = null;
 
 
-    function handleRemoveMember(event) {
+  //   function handleRemoveMember(event) {
+  //   event.preventDefault();
+  //   props.onRemoveMember(props.id);
+  //   // props.onRemoveMember({id: _id});
+  //   _id = props.id;
+  // }
+
+  function handleRemoveMember(event) {
+    const { dispatch } = props;
     event.preventDefault();
-    props.onRemoveMember(props.id);
-    // props.onRemoveMember({id: _id});
-    _id = props.id;
+    const action = {
+      type: 'REMOVE_MEMBER',
+      id: props.id
+    };
+    dispatch(action);
   }
+
+
+
+
   return (
     <div>
       <style jsx>{`
@@ -49,4 +64,4 @@ RemoveMember.propTypes = {
   id: PropTypes.string.isRequired
 };
 
-export default RemoveMember;
+export default connect()(RemoveMember);
