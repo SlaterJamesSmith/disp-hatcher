@@ -28,14 +28,15 @@ function JobBuilder(props){
            margin-bottom: 0;
          }
        `}</style>
-     <h2>List Builder Info Here</h2>
-      {props.memberList.map((member) =>
-        <Member firstName={member.firstName}
+      <h2>List Builder Info Here</h2>
+      {Object.keys(props.memberList).map(function(id) {
+        var member = props.memberList[id];
+        return <Member firstName={member.firstName}
           lastName={member.lastName}
           email={member.email}
           notesMaster={member.notesMaster}
           key={member.id} />
-      )}
+      })}
 
     </div>
   );
