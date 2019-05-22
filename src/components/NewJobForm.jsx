@@ -14,6 +14,29 @@ function NewJobForm(props){
   function handleNewJobFormSubmission(event) {
     const { dispatch } = props;
     event.preventDefault();
+    // let newJobMembers = Object.assign({}, props.jobMemberList, {
+    //   newKeyValue: 'test value'
+    // })
+
+
+    let newJobMembers = Object.keys(props.jobMemberList).map(function(id) {
+      const member = props.jobMemberList[id];
+      const source = {newKeyValue: 'test value'}
+      return Object.assign(member, source)
+    })
+
+    // {Object.keys(props.jobDispList).map(function(id) {
+    //     var job = props.jobDispList[id];
+    //     return <JobDisp
+    //       id={job.id}
+    //       jobName={job.jobName}
+    //       jobDispShow={job.jobDispShow} />
+    //   })}
+
+
+
+
+
     console.log(props.jobMemberList)
     const action = {
       type: 'ADD_JOB',
@@ -23,7 +46,7 @@ function NewJobForm(props){
       jobStart: jobStart.value,
       jobEnd: jobEnd.value,
       jobNotes: jobNotes.value,
-      jobMembers: props.jobMemberList
+      jobMembers: newJobMembers
     };
     dispatch(action);
     props.onNewJobForm({formVisibleOnPage: _formVisibleOnPage});
