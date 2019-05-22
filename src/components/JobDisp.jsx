@@ -15,15 +15,12 @@ let showSelectedList
       id: props.id
     };
     dispatch(action);
-    if (props.jobDispShow == true) {
-      testVariable = <p>Test</p>;
-      console.log('props true')
-    }
+
     // console.log(testVariable)
   }
 
   if (props.jobDispShow == true) {
-    showSelectedList = <p>Test</p>
+    showSelectedList = '(Selected)';
   } else {
     showSelectedList = null
   }
@@ -67,8 +64,7 @@ let showSelectedList
         }
        `}</style>
 
-     <button onClick={handleJobShow}>{props.jobName}</button>
-     {showSelectedList}
+     <button onClick={handleJobShow}>{props.jobName} {showSelectedList}</button>
 
     </div>
   );
