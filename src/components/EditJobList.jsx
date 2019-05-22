@@ -28,7 +28,7 @@ function EditJobList(props){
            margin-bottom: 0;
          }
        `}</style>
-      <h2>MEMBER SORTING OPTIONS GO HERE</h2>
+     <h2>Current Jobs</h2>
       {Object.keys(props.jobList).map(function(id) {
         var job = props.jobList[id];
         return <Job

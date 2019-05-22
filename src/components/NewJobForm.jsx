@@ -50,27 +50,27 @@ function NewJobForm(props){
         <li><input
           type='text'
           id='jobName'
-          placeholder='First Name'
+          placeholder='Job Name'
           ref={(input) => {_jobName = input;}}/></li>
         <li><input
           type='text'
           id='client'
-          placeholder='Last Name'
+          placeholder='Client Name'
           ref={(input) => {_client = input;}}/></li>
         <li><input
           type='text'
           id='jobStart'
-          placeholder='Email'
+          placeholder='Start Time/Date'
           ref={(input) => {_jobStart = input;}}/></li>
         <li><input
           type='text'
           id='jobEnd'
-          placeholder='Notes'
+          placeholder='End Time/Date'
           ref={(input) => {_jobEnd = input;}}/></li>
         <li><input
           type='text'
           id='jobNotes'
-          placeholder='Proficiencies'
+          placeholder='Notes'
           ref={(input) => {_jobNotes = input;}}/></li>
         <button type='submit'>Submit</button>
         <button type='submit' onClick={handleCancel}>Cancel</button>

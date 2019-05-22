@@ -25,7 +25,7 @@ function Job(props){
         }
        `}</style>
       <ul>
-        <li><p><strong>Job Name:</strong> {props.job}</p></li>
+        <li><p><strong>Job Name:</strong> {props.jobName}</p></li>
         <li><p><strong>Client</strong> {props.client}</p></li>
         <li><p><strong>Start Time/Date:</strong> {props.jobStart}</p></li>
         <li><p><strong>End Time/Date:</strong> {props.jobEnd}</p></li>

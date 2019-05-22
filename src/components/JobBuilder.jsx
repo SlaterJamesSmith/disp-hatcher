@@ -68,9 +68,9 @@ class JobBuilder extends React.Component {
            margin-bottom: 0;
          }
        `}</style>
-      <h2>List Builder Info Here</h2>
         {currentlyVisibleContent}
         {buttonVisible}
+        <EditJobList jobList={this.props.jobList} />
 
 
 
