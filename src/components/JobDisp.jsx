@@ -2,7 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+
 function JobDisp(props){
+
+
+
+
+  function handleJobShow(event) {
+    const { dispatch } = props;
+    event.preventDefault();
+    const action = {
+      type: 'SHOW_JOB_DISPATCH',
+      id: props.id
+    };
+    dispatch(action);
+
+  }
+
+
+
+
+
+
   return (
     <div>
       <style jsx>{`
@@ -25,7 +46,7 @@ function JobDisp(props){
         }
        `}</style>
 
-        <button>{props.jobName}</button>
+     <button onClick={handleJobShow}>{props.jobName}</button>
 
 
     </div>
