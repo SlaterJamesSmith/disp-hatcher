@@ -36,7 +36,7 @@ class ContentContainer extends React.Component{
          `}</style>
         <Switch>
           <Route exact path='/' render={()=><Dispatcher jobDispList={this.props.masterJobList} memberList={this.props.masterMemberList} />} />
-          <Route exact path='/job-builder' render={()=><JobBuilder jobList={this.props.masterJobList} />} />
+          <Route exact path='/job-builder' render={()=><JobBuilder jobList={this.props.masterJobList} jobMemberList={this.props.masterMemberList} />} />
           <Route path='/admin' render={()=><Profiles removeMemberList={this.props.masterMemberList} onRemoveMember={this.handleRemoveMemberFromList} />} />
           <Route component={Error404} />
         </Switch>

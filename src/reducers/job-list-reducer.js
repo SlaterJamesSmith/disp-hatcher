@@ -4,7 +4,7 @@ import c from './../constants';
 
 export default (state = {}, action) => {
   let newState;
-  const { jobName, client, jobStart, jobEnd, jobNotes, jobDispShow, id } = action;
+  const { jobName, client, jobStart, jobEnd, jobNotes, jobDispShow, jobMembers, id } = action;
 
   switch (action.type) {
   case c.ADD_JOB:
@@ -16,6 +16,7 @@ export default (state = {}, action) => {
         jobEnd: jobEnd,
         jobNotes: jobNotes,
         jobDispShow: false,
+        jobMembers: jobMembers,
         id: id
       }
     });
@@ -40,10 +41,6 @@ export default (state = {}, action) => {
       newState[key].jobDispShow = false;
     });
     newState[id].jobDispShow = true;
-
-    // console.log('hello! Show Job Dispatch!');
-    // console.log(newState);
-
     return newState
 
   default:

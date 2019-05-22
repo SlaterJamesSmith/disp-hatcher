@@ -5,20 +5,6 @@ import NewJobForm from './NewJobForm';
 import EditJobList from './EditJobList';
 
 
-// {Object.keys(props.memberList).map(function(id) {
-//   var member = props.memberList[id];
-//   return <Job firstName={member.firstName}
-//     lastName={member.lastName}
-//     email={member.email}
-//     proficiencies={member.proficiencies}
-//     exclusions={member.exclusions}
-//     hireDate={member.hireDate}
-//     listNumber={member.listNumber}
-//     notesMaster={member.notesMaster}
-//     key={member.id} />
-// })}
-
-
 class JobBuilder extends React.Component {
 
   constructor(props) {
@@ -42,7 +28,7 @@ class JobBuilder extends React.Component {
     let currentlyVisibleContent = null;
     let buttonVisible = <button onClick={this.handleShowingForm}>Add Job</button>;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <NewJobForm onNewJobForm={this.handleHidingForm}/>;
+      currentlyVisibleContent = <NewJobForm jobMemberList={this.props.jobMemberList} onNewJobForm={this.handleHidingForm}/>;
       buttonVisible = null;
     }
 

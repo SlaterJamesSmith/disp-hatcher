@@ -14,6 +14,7 @@ function NewJobForm(props){
   function handleNewJobFormSubmission(event) {
     const { dispatch } = props;
     event.preventDefault();
+    console.log(props.jobMemberList)
     const action = {
       type: 'ADD_JOB',
       id: v4(),
@@ -22,6 +23,7 @@ function NewJobForm(props){
       jobStart: jobStart.value,
       jobEnd: jobEnd.value,
       jobNotes: jobNotes.value,
+      jobMembers: props.jobMemberList
     };
     dispatch(action);
     props.onNewJobForm({formVisibleOnPage: _formVisibleOnPage});
