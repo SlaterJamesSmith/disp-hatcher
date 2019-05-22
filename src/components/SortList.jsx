@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import JobSpecificMembers from './JobSpecificMembers';
 
 
 function SortList(props){
+
+  console.log(props.jobMembers)
 
   if (props.jobDispShow == true) {
 
@@ -34,6 +37,18 @@ function SortList(props){
 
 
      <h2><span>Job:</span> {props.jobName}</h2>
+
+      {Object.keys(props.jobMembers).map(function(id) {
+          var member = props.jobMembers[id];
+          return <JobSpecificMembers
+            id={member.id}
+            firstName={member.firstName}
+            />
+        })}
+
+
+
+
 
 
 

@@ -54,6 +54,7 @@ function Dispatcher(props){
           jobEnd={job.jobEnd}
           jobDispShow={job.jobDispShow}
           jobNotes={job.jobNotes}
+          jobMembers={job.jobMembers}
           />
       })}
 

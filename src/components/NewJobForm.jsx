@@ -14,9 +14,7 @@ function NewJobForm(props){
   function handleNewJobFormSubmission(event) {
     const { dispatch } = props;
     event.preventDefault();
-    // let newJobMembers = Object.assign({}, props.jobMemberList, {
-    //   newKeyValue: 'test value'
-    // })
+
 
 
     let newJobMembers = Object.keys(props.jobMemberList).map(function(id) {
@@ -24,14 +22,6 @@ function NewJobForm(props){
       const source = {availability: '', offerSent: false}
       return Object.assign(member, source)
     })
-
-    // {Object.keys(props.jobDispList).map(function(id) {
-    //     var job = props.jobDispList[id];
-    //     return <JobDisp
-    //       id={job.id}
-    //       jobName={job.jobName}
-    //       jobDispShow={job.jobDispShow} />
-    //   })}
 
 
 
