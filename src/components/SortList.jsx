@@ -12,8 +12,11 @@ function SortList(props){
       <style jsx>{`
         div {
           font-family: arial;
-          background-color: lightgrey;
-          color: black;
+          background-color: lightgreen;
+          color: green;
+        }
+        h2 {
+          padding: 20px;
         }
         ul {
           padding: 8px;
@@ -25,17 +28,13 @@ function SortList(props){
           margin-top: -10px;
         }
         span {
-          color: gray;
+          color: grey;
         }
        `}</style>
 
-      <ul>
-        <li><p><strong>Job Name:</strong> {props.jobName}</p></li>
-        <li><p><strong>Client</strong> {props.client}</p></li>
-        <li><p><strong>Start Time/Date:</strong> {props.jobStart}</p></li>
-        <li><p><strong>End Time/Date:</strong> {props.jobEnd}</p></li>
-        <li><p><strong>Notes:</strong> {props.jobNotes}</p></li>
-      </ul>
+
+     <h2><span>Job:</span> {props.jobName}</h2>
+
 
 
     </div>
