@@ -5,17 +5,7 @@ import { connect } from 'react-redux';
 
 function SortList(props){
 
-
-  function handleJobShow(event) {
-    const { dispatch } = props;
-    event.preventDefault();
-    const action = {
-      type: 'SHOW_JOB_DISPATCH',
-      id: props.id
-    };
-    dispatch(action);
-  }
-
+  if (props.jobDispShow == true) {
 
   return (
     <div>
@@ -39,17 +29,22 @@ function SortList(props){
         }
        `}</style>
 
-       <ul>
-         <li><p><strong>Job Name:</strong> {props.jobName}</p></li>
-         <li><p><strong>Client</strong> {props.client}</p></li>
-         <li><p><strong>Start Time/Date:</strong> {props.jobStart}</p></li>
-         <li><p><strong>End Time/Date:</strong> {props.jobEnd}</p></li>
-         <li><p><strong>Notes:</strong> {props.jobNotes}</p></li>
-       </ul>
+      <ul>
+        <li><p><strong>Job Name:</strong> {props.jobName}</p></li>
+        <li><p><strong>Client</strong> {props.client}</p></li>
+        <li><p><strong>Start Time/Date:</strong> {props.jobStart}</p></li>
+        <li><p><strong>End Time/Date:</strong> {props.jobEnd}</p></li>
+        <li><p><strong>Notes:</strong> {props.jobNotes}</p></li>
+      </ul>
 
 
     </div>
   );
+} else {
+  return (
+    <div></div>
+  );
+}
 }
 
 SortList.propTypes = {
@@ -60,3 +55,19 @@ SortList.propTypes = {
 };
 
 export default connect()(SortList);
+
+
+// {Object.keys(props.jobDispList).map(function(id) {
+//   var job = props.jobDispList[id];
+//   if (props.jobDispShow == true) {
+//     return <SortList
+//       onRemoveJob={props.onRemoveJob}
+//       id={job.id}
+//       jobName={job.jobName}
+//       client={job.client}
+//       jobStart={job.jobStart}
+//       jobEnd={job.jobEnd}
+//       jobNotes={job.jobNotes}
+//       />
+//   }
+// })}

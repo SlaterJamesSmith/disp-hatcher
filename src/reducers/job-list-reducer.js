@@ -41,8 +41,8 @@ export default (state = {}, action) => {
     });
     newState[id].jobDispShow = true;
 
-    console.log('hello! Show Job Dispatch!');
-    console.log(newState);
+    // console.log('hello! Show Job Dispatch!');
+    // console.log(newState);
 
     return newState
 

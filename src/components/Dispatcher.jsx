@@ -37,29 +37,29 @@ function Dispatcher(props){
      {Object.keys(props.jobDispList).map(function(id) {
          var job = props.jobDispList[id];
          return <JobDisp
-           onRemoveJob={props.onRemoveJob}
            id={job.id}
            jobName={job.jobName}
-           client={job.client}
-           jobStart={job.jobStart}
-           jobEnd={job.jobEnd}
-           jobNotes={job.jobNotes} />
+           jobDispShow={job.jobDispShow} />
        })}
 
-     {Object.keys(props.jobDispList).map(function(id) {
-         var job = props.jobDispList[id];
-         return <SortList
-           onRemoveJob={props.onRemoveJob}
-           id={job.id}
-           jobName={job.jobName}
-           client={job.client}
-           jobStart={job.jobStart}
-           jobEnd={job.jobEnd}
-           jobNotes={job.jobNotes} />
-       })}
+    <h2>Sort Buttons Here</h2>
+
+    {Object.keys(props.jobDispList).map(function(id) {
+        var job = props.jobDispList[id];
+        return <SortList
+          id={job.id}
+          jobName={job.jobName}
+          client={job.client}
+          jobStart={job.jobStart}
+          jobEnd={job.jobEnd}
+          jobDispShow={job.jobDispShow}
+          jobNotes={job.jobNotes}
+          />
+      })}
 
 
-     <h2>Sort Buttons Here</h2>
+
+
 
 
     </div>

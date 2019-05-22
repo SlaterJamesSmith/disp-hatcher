@@ -4,17 +4,45 @@ import { connect } from 'react-redux';
 
 
 function JobDisp(props){
-
+let showSelectedList
 
   function handleJobShow(event) {
     const { dispatch } = props;
     event.preventDefault();
     const action = {
       type: 'SHOW_JOB_DISPATCH',
+      jobDispShow: props.jobDispShow,
       id: props.id
     };
     dispatch(action);
+    if (props.jobDispShow == true) {
+      testVariable = <p>Test</p>;
+      console.log('props true')
+    }
+    // console.log(testVariable)
   }
+
+  if (props.jobDispShow == true) {
+    showSelectedList = <p>Test</p>
+  } else {
+    showSelectedList = null
+  }
+
+  // {Object.keys(props.jobDispList).map(function(id) {
+  //     var job = props.jobDispList[id];
+  //     if (props.jobDispShow == true) {
+  //      return <SortList
+  //        onRemoveJob={props.onRemoveJob}
+  //        id={job.id}
+  //        jobName={job.jobName}
+  //        client={job.client}
+  //        jobStart={job.jobStart}
+  //        jobEnd={job.jobEnd}
+  //        jobDispShow={job.jobDispShow}
+  //        jobNotes={job.jobNotes}
+  //        />
+  //    }
+  //   })}
 
 
   return (
@@ -40,7 +68,7 @@ function JobDisp(props){
        `}</style>
 
      <button onClick={handleJobShow}>{props.jobName}</button>
-
+     {showSelectedList}
 
     </div>
   );
