@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 
-function JobDisp(props){
+function SortList(props){
 
 
   function handleJobShow(event) {
@@ -39,18 +39,24 @@ function JobDisp(props){
         }
        `}</style>
 
-     <button onClick={handleJobShow}>{props.jobName}</button>
+       <ul>
+         <li><p><strong>Job Name:</strong> {props.jobName}</p></li>
+         <li><p><strong>Client</strong> {props.client}</p></li>
+         <li><p><strong>Start Time/Date:</strong> {props.jobStart}</p></li>
+         <li><p><strong>End Time/Date:</strong> {props.jobEnd}</p></li>
+         <li><p><strong>Notes:</strong> {props.jobNotes}</p></li>
+       </ul>
 
 
     </div>
   );
 }
 
-JobDisp.propTypes = {
+SortList.propTypes = {
   // firstName: PropTypes.string.isRequired,
   // lastName: PropTypes.string.isRequired,
   // email: PropTypes.string.isRequired,
   // notesMaster: PropTypes.string.isRequired
 };
 
-export default connect()(JobDisp);
+export default connect()(SortList);

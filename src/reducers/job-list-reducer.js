@@ -36,12 +36,9 @@ export default (state = {}, action) => {
 
   case c.SHOW_JOB_DISPATCH:
     newState = Object.assign({}, state);
-
     Object.keys(newState).forEach(function(key) {
       newState[key].jobDispShow = false;
     });
-
-
     newState[id].jobDispShow = true;
 
     console.log('hello! Show Job Dispatch!');
