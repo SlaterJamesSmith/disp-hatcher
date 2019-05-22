@@ -21,7 +21,7 @@ function NewJobForm(props){
 
     let newJobMembers = Object.keys(props.jobMemberList).map(function(id) {
       const member = props.jobMemberList[id];
-      const source = {newKeyValue: 'test value'}
+      const source = {availability: '', offerSent: false}
       return Object.assign(member, source)
     })
 
