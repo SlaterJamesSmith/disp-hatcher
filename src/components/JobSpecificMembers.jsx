@@ -2,6 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+//VALUES PASSED TO UI FROM STATE
+// id={member.id}
+// firstName={member.firstName}
+// lastName={member.lastName}
+// email={member.email}
+// proficiencies={member.proficiencies}
+// exclusions={member.exclusions}
+// hireDate={member.hireDate}
+// listNumber={member.listNumber}
+// notesMaster={member.notesMaster}
+// availability={member.availability}
+// offerSent={member.offerSent}
 
 function JobSpecificMembers(props){
 
@@ -13,9 +25,11 @@ function JobSpecificMembers(props){
     <div>
       <style jsx>{`
         div {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
           font-family: arial;
           background-color: lightgreen;
-          color: green;
+          color: black;
         }
         h2 {
           padding: 20px;
@@ -27,7 +41,9 @@ function JobSpecificMembers(props){
         li {
           display: block;
           padding: 0;
-          margin-top: -10px;
+          background-color: lightgrey;
+          border-bottom: 1px solid forestgreen;
+          padding: 5px;
         }
         span {
           color: grey;
@@ -35,7 +51,11 @@ function JobSpecificMembers(props){
        `}</style>
 
 
-     <h2>Name: {props.firstName}</h2>
+     <li>{props.firstName} {props.lastName}</li>
+     <li>{props.proficiencies}</li>
+     <li>{props.hireDate}</li>
+
+
 
 
 

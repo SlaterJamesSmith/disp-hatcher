@@ -15,20 +15,30 @@ function SortList(props){
       <style jsx>{`
         div {
           font-family: arial;
-          background-color: lightgreen;
+          background-color: black;
           color: green;
+          border: 3px solid gray;
         }
         h2 {
           padding: 20px;
+          background-color: lightgreen;
+          margin: 0;
+          border-bottom: 3px solid grey;
         }
         ul {
           padding: 8px;
-          border: 3px solid grey;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          font-family: arial;
+          background-color: darkgray;
+          color: black;
+          margin: 0;
         }
         li {
           display: block;
           padding: 0;
-          margin-top: -10px;
+          margin: 0;
+          font-weight: bold;
         }
         span {
           color: grey;
@@ -36,8 +46,12 @@ function SortList(props){
        `}</style>
 
 
-     <h2><span>Job:</span> {props.jobName}</h2>
-
+    <h2><span>Job:</span> {props.jobName}</h2>
+    <ul>
+      <li>Name</li>
+      <li>Proficiencies</li>
+      <li>Hire Date</li>
+    </ul>
       {Object.keys(props.jobMembers).map(function(id) {
           var member = props.jobMembers[id];
           return <JobSpecificMembers
