@@ -15,8 +15,9 @@ export default (state = {}, action) => {
         jobStart: jobStart,
         jobEnd: jobEnd,
         jobNotes: jobNotes,
-        jobDispShow: false,
+        jobDispShow: null,
         jobMembers: jobMembers,
+        jobMembId: null,
         id: id
       }
     });
@@ -43,14 +44,29 @@ export default (state = {}, action) => {
     newState[id].jobDispShow = true;
     return newState
 
-    case c.SEND_OFFER:
-      newState = Object.assign({}, state);
-      // newState[id].jobMembers
-      console.log(jobMembId)
-      newState[id].jobMembers[jobMembId].offerSent = true;
-      console.log(newState[id].jobMembers[jobMembId].offerSent)
-      // newState[jobId].jobMembers[memberId] = true;
-      return newState
+  case c.SEND_OFFER:
+    newState = Object.assign({}, state);
+    // newState[id].jobMembers
+    // console.log(id)
+    // console.log('fire')
+    // console.log(Object.keys(newState))
+    // console.log([id])
+    // const blah = [id];
+    // const blahblah = Object.keys(newState);
+    console.log(id)
+    console.log(jobMembId)
+    console.log(newState)
+    // console.log(newState[id].jobMembers[jobMembId].offerSent)
+    //
+    // newState[id].jobMembers[jobMembId].offerSent = 'sent';
+    console.log(newState)
+
+    // newState.jobMembId = null,
+    // newState[id].jobMembers[jobMembId].offerSent = null;
+
+
+
+    return newState
 
   default:
     return state;

@@ -17,7 +17,13 @@ import { connect } from 'react-redux';
 
 function JobSpecificMembers(props){
 let sentOffer
-  console.log(props.offerSent)
+  // console.log(props.offerSent)
+
+let memberObj = props.memberIds;
+let myMember = memberObj[props.fancyProps]
+
+const newMemberId = props.newId
+const newJobId = props.jobId
 
   function handleSendOffer(event) {
     const { dispatch } = props;
@@ -25,19 +31,24 @@ let sentOffer
     const action = {
       type: 'SEND_OFFER',
       id: props.jobId,
-      jobMembId: props.memberId
+      jobMembId: props.fancyProps
     };
     dispatch(action);
 
-    console.log(props.offerSent)
+
+    console.log(props.jobId)
+    console.log(props.fancyProps)
+    console.log(props.memberIds)
+    console.log(myMember)
+    console.log(myMember.newId)
 
   }
 
-  if (props.offerSent == true) {
-    sentOffer = 'yes'
-  } else {
-    sentOffer = 'no'
-  }
+  // if (props.offerSent == true) {
+  //   sentOffer = 'yes'
+  // } else {
+  //   sentOffer = 'no'
+  // }
 
 
 
@@ -74,8 +85,8 @@ let sentOffer
      <li>{props.firstName} {props.lastName}</li>
      <li>{props.proficiencies}</li>
      <li>{props.jobId}</li>
-     <li>{props.memberId}</li>
-     <li>{sentOffer}</li>
+     <li>{props.fancyProps}</li>
+     <li>{props.offerSent}</li>
      <button onClick={handleSendOffer}>Send Offer</button>
 
 

@@ -21,7 +21,7 @@ function NewJobForm(props){
 
       const member = props.jobMemberList[id];
       // console.log(props.jobMemberList)
-      const source = {availability: '', offerSent: false}
+      const source = {availability: '', offerSent: 'no', newId: v4()}
       const memberObj = Object.assign(member, source)
       // console.log(memberObj)
       return memberObj
@@ -30,11 +30,17 @@ function NewJobForm(props){
 
     const arrayToObject = (array) =>
        array.reduce((obj, item) => {
-         obj[item.id] = item
+         obj[item.newId] = item
+
+
          return obj
        }, {})
     const newJobMembers = arrayToObject(newJobMembersArray)
 
+
+
+
+    console.log(newJobMembers)
     const action = {
       type: 'ADD_JOB',
       id: v4(),

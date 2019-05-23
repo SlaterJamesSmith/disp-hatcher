@@ -4,12 +4,24 @@ import { connect } from 'react-redux';
 import JobSpecificMembers from './JobSpecificMembers';
 
 
+// membersProps={props.jobMembers}
+// memberId={member.id}
+// firstName={member.firstName}
+// lastName={member.lastName}
+// email={member.email}
+// proficiencies={member.proficiencies}
+// exclusions={member.exclusions}
+// hireDate={member.hireDate}
+// listNumber={member.listNumber}
+// notesMaster={member.notesMaster}
+// availability={member.availability}
+// offerSent={member.offerSent}
+// newId={member.newId}
+
 function SortList(props){
+  // console.log(props.jobMembers)
 
-  console.log(props.jobMembers)
-
-  if (props.jobDispShow == true) {
-
+  if (props.jobDispShow === true) {
   return (
     <div>
       <style jsx>{`
@@ -55,20 +67,13 @@ function SortList(props){
       <li>Offer Sent</li>
     </ul>
       {Object.keys(props.jobMembers).map(function(id) {
-          var member = props.jobMembers[id];
+
+          let member = props.jobMembers[id];
           return <JobSpecificMembers
             jobId={props.jobId}
-            memberId={member.id}
-            firstName={member.firstName}
-            lastName={member.lastName}
-            email={member.email}
-            proficiencies={member.proficiencies}
-            exclusions={member.exclusions}
-            hireDate={member.hireDate}
-            listNumber={member.listNumber}
-            notesMaster={member.notesMaster}
-            availability={member.availability}
-            offerSent={member.offerSent}
+            memberIds={props.jobMembers[id]}
+            newId={member.newId}
+            fancyProps={id}
             />
         })}
 
@@ -84,7 +89,7 @@ function SortList(props){
 } else {
   return (
     <div></div>
-  );
+  )
 }
 }
 
