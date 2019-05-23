@@ -47,7 +47,7 @@ function Dispatcher(props){
     {Object.keys(props.jobDispList).map(function(id) {
         var job = props.jobDispList[id];
         return <SortList
-          id={job.id}
+          jobId={job.id}
           jobName={job.jobName}
           client={job.client}
           jobStart={job.jobStart}

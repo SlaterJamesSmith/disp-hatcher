@@ -16,17 +16,26 @@ import { connect } from 'react-redux';
 // offerSent={member.offerSent}
 
 function JobSpecificMembers(props){
+let sentOffer
+  console.log(props.offerSent)
 
-  console.log(props.jobMembers)
+  function handleSendOffer(event) {
+
+  }
 
 
+  if (props.offerSent == false) {
+    sentOffer = 'no'
+  } else {
+    sentOffer = 'yes'
+  }
 
   return (
     <div>
       <style jsx>{`
         div {
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
           font-family: arial;
           background-color: lightgreen;
           color: black;
@@ -53,7 +62,10 @@ function JobSpecificMembers(props){
 
      <li>{props.firstName} {props.lastName}</li>
      <li>{props.proficiencies}</li>
-     <li>{props.hireDate}</li>
+     <li>{props.jobId}</li>
+     <li>{props.memberId}</li>
+     <li>{sentOffer}</li>
+     <button onClick={handleSendOffer}>Send Offer</button>
 
 
 

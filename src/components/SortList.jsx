@@ -28,7 +28,7 @@ function SortList(props){
         ul {
           padding: 8px;
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
           font-family: arial;
           background-color: darkgray;
           color: black;
@@ -50,12 +50,15 @@ function SortList(props){
     <ul>
       <li>Name</li>
       <li>Proficiencies</li>
-      <li>Hire Date</li>
+      <li>Job ID</li>
+      <li>Member ID</li>
+      <li>Offer Sent</li>
     </ul>
       {Object.keys(props.jobMembers).map(function(id) {
           var member = props.jobMembers[id];
           return <JobSpecificMembers
-            id={member.id}
+            jobId={props.jobId}
+            memberId={member.id}
             firstName={member.firstName}
             lastName={member.lastName}
             email={member.email}

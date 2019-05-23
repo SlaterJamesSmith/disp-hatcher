@@ -23,10 +23,6 @@ function NewJobForm(props){
       return Object.assign(member, source)
     })
 
-
-
-
-
     console.log(props.jobMemberList)
     const action = {
       type: 'ADD_JOB',
