@@ -36,20 +36,12 @@ const newJobId = props.jobId
     dispatch(action);
 
 
-    console.log(props.jobId)
-    console.log(props.fancyProps)
-    console.log(props.memberIds)
-    console.log(myMember)
-    console.log(myMember.newId)
 
+    console.log(props.jobId)
   }
 
-  // if (props.offerSent == true) {
-  //   sentOffer = 'yes'
-  // } else {
-  //   sentOffer = 'no'
-  // }
 
+// console.log(props.masterJobList[props.jobId].jobMembers[props.fancyProps].newId)
 
 
   return (
@@ -82,11 +74,11 @@ const newJobId = props.jobId
        `}</style>
 
 
-     <li>{props.firstName} {props.lastName}</li>
+     <li>{props.masterJobList[props.jobId].jobMembers[props.fancyProps].firstName} {props.masterJobList[props.jobId].jobMembers[props.fancyProps].lastName}</li>
      <li>{props.proficiencies}</li>
      <li>{props.jobId}</li>
      <li>{props.fancyProps}</li>
-     <li>{props.offerSent}</li>
+     <li>{props.masterJobList[props.jobId].jobMembers[props.fancyProps].offerSent}</li>
      <button onClick={handleSendOffer}>Send Offer</button>
 
 
@@ -105,4 +97,16 @@ JobSpecificMembers.propTypes = {
   // notesMaster: PropTypes.string.isRequired
 };
 
-export default connect()(JobSpecificMembers);
+// function mapStateToProps(state) {
+//   console.log(state)
+// }
+
+const mapStateToProps = state => {
+  return {
+    masterJobList: state.masterJobList,
+    masterJobList: state.masterJobList
+  }
+};
+
+
+export default connect(mapStateToProps)(JobSpecificMembers);
