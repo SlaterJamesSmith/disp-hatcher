@@ -4,7 +4,7 @@ import c from './../constants';
 
 export default (state = {}, action) => {
   let newState;
-  const { jobName, client, jobStart, jobEnd, jobNotes, jobDispShow, jobMembers, id } = action;
+  const { jobName, client, jobStart, jobEnd, jobNotes, jobDispShow, jobMembers, jobMembId, id } = action;
 
   switch (action.type) {
   case c.ADD_JOB:
@@ -42,6 +42,15 @@ export default (state = {}, action) => {
     });
     newState[id].jobDispShow = true;
     return newState
+
+    case c.SEND_OFFER:
+      newState = Object.assign({}, state);
+      // newState[id].jobMembers
+      console.log(jobMembId)
+      newState[id].jobMembers[jobMembId].offerSent = true;
+      console.log(newState[id].jobMembers[jobMembId].offerSent)
+      // newState[jobId].jobMembers[memberId] = true;
+      return newState
 
   default:
     return state;

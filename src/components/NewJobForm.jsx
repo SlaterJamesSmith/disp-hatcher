@@ -34,11 +34,7 @@ function NewJobForm(props){
          return obj
        }, {})
     const newJobMembers = arrayToObject(newJobMembersArray)
-    console.log(newJobMembers)
 
-
-
-    console.log(newJobMembers)
     const action = {
       type: 'ADD_JOB',
       id: v4(),

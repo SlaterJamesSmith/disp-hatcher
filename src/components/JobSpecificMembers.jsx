@@ -24,19 +24,22 @@ let sentOffer
     event.preventDefault();
     const action = {
       type: 'SEND_OFFER',
-      jobId: props.jobId,
-      memberId: props.memberId
+      id: props.jobId,
+      jobMembId: props.memberId
     };
     dispatch(action);
 
+    console.log(props.offerSent)
+
   }
 
-
-  if (props.offerSent == false) {
-    sentOffer = 'no'
-  } else {
+  if (props.offerSent == true) {
     sentOffer = 'yes'
+  } else {
+    sentOffer = 'no'
   }
+
+
 
   return (
     <div>
