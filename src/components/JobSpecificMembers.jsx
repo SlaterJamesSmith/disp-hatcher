@@ -20,6 +20,14 @@ let sentOffer
   console.log(props.offerSent)
 
   function handleSendOffer(event) {
+    const { dispatch } = props;
+    event.preventDefault();
+    const action = {
+      type: 'SEND_OFFER',
+      jobId: props.jobId,
+      memberId: props.memberId
+    };
+    dispatch(action);
 
   }
 

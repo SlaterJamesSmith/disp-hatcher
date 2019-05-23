@@ -17,13 +17,28 @@ function NewJobForm(props){
 
 
 
-    let newJobMembers = Object.keys(props.jobMemberList).map(function(id) {
+    let newJobMembersArray = Object.keys(props.jobMemberList).map(function(id) {
+
       const member = props.jobMemberList[id];
+      // console.log(props.jobMemberList)
       const source = {availability: '', offerSent: false}
-      return Object.assign(member, source)
+      const memberObj = Object.assign(member, source)
+      // console.log(memberObj)
+      return memberObj
+      // return {[id]: newMember}
     })
 
-    console.log(props.jobMemberList)
+    const arrayToObject = (array) =>
+       array.reduce((obj, item) => {
+         obj[item.id] = item
+         return obj
+       }, {})
+    const newJobMembers = arrayToObject(newJobMembersArray)
+    console.log(newJobMembers)
+
+
+
+    console.log(newJobMembers)
     const action = {
       type: 'ADD_JOB',
       id: v4(),
