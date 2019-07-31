@@ -42,17 +42,17 @@ export default (state = {}, action) => {
     console.log(state)
     console.log(newState[id])
 
-    Object.keys(newState).forEach(function(key) {
+    // Object.keys(newState).forEach(function(key) {
 
-      newState[id].jobMembers[jobMembId].offerSent = 'yes'
-    });
-
-
+    newState[id].jobMembers[jobMembId].offerSent = 'yes'
+    // });
 
 
 
 
-    return newOldState
+
+
+    return newState
 
   default:
     return state;
