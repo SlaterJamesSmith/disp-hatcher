@@ -6,10 +6,7 @@
     "start": "webpack-dev-server",
     "test": "jest; exit 0",
     "lint": "eslint src/** src/**/**; exit 0",
-    "lint-fix": "eslint src/** src/**/** --fix; exit 0",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "lint-fix": "eslint src/** src/**/** --fix; exit 0"
   },
   "author": "Slater Smith",
   "license": "ISC",
@@ -43,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SlaterJamesSmith/disp-hatcher.git"
+    "url": "git+https://github.com/SlaterJamesSmith/disp-hatcher"
   },
   "bugs": {
     "url": "https://github.com/SlaterJamesSmith/disp-hatcher/issues"
