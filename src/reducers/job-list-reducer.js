@@ -38,14 +38,6 @@ export default (state = {}, action) => {
     return newState
 
   case c.SEND_OFFER:
-    // newState = Object.assign({}, state);
-    // console.log(state)
-    // console.log(newState[id])
-    //
-    // // Object.keys(newState).forEach(function(key) {
-    //
-    // newState[id].jobMembers[jobMembId].offerSent = 'yes'
-    // // });
     newState = Object.assign({}, state, {
       [id]: Object.assign({}, state[id], {
         jobMembers: Object.assign({}, state[id].jobMembers, {
