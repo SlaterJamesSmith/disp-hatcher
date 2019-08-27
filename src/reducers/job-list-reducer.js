@@ -4,7 +4,6 @@ import c from './../constants';
 
 export default (state = {}, action) => {
   let newState;
-  let newOldState;
   const { jobName, client, jobStart, jobEnd, jobNotes, jobDispShow, jobMembers, jobMembId, id } = action;
 
   switch (action.type) {
@@ -23,9 +22,6 @@ export default (state = {}, action) => {
       }
     });
 
-
-    console.log(state)
-    console.log(newState);
     return newState;
 
 
