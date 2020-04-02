@@ -20,9 +20,9 @@ let showSelectedList
   }
 
   if (props.jobDispShow == true) {
-    showSelectedList = '(Selected)';
+    showSelectedList = 'selected';
   } else {
-    showSelectedList = null
+    showSelectedList = 'notselected';
   }
 
   // {Object.keys(props.jobDispList).map(function(id) {
@@ -62,9 +62,19 @@ let showSelectedList
         span {
           color: gray;
         }
+        button {
+          font-weight: bold;
+          font-size: 15px;
+        }
+        #notselected {
+          color: red;
+        }
+        #selected {
+          color: green;
+        }
        `}</style>
 
-     <button onClick={handleJobShow}>{props.jobName} {showSelectedList}</button>
+     <button onClick={handleJobShow} id={showSelectedList}>{props.jobName}</button>
 
     </div>
   );
