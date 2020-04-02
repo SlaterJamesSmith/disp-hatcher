@@ -33,6 +33,9 @@ function Dispatcher(props){
            color: white;
            text-align: center;
            width: 100vw;
+           margin-top: 0;
+           margin-bottom: 5px;
+           padding-top: 0;
          }
          ul {
            padding: 8px;
@@ -55,6 +58,7 @@ function Dispatcher(props){
 
     <h2>Sort Buttons Here</h2>
     <h3>To begin, click 'job builder' to create a job</h3>
+    <h3>Create multiple jobs to toggle between them and update workers on specific jobs</h3>
     {Object.keys(props.jobDispList).map(function(id) {
         var job = props.jobDispList[id];
         return <SortList

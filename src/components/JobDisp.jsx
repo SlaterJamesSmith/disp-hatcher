@@ -49,7 +49,7 @@ let showSelectedList
           display: flex;
           flex-direction: row;
           font-family: arial;
-          background-color: lightgrey;
+          background-color: none;
           color: black;
         }
         ul {
@@ -67,6 +67,7 @@ let showSelectedList
         button {
           font-weight: bold;
           font-size: 15px;
+          border-radius: 5px;
         }
         #notselected {
           color: black;
@@ -74,6 +75,7 @@ let showSelectedList
         #selected {
           color: black;
           box-shadow: inset 0 0 10px #404040;
+          outline: none;
         }
        `}</style>
 
