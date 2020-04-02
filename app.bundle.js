@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6c34b8fd8912128ad82f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c5864b54e3eefc950af5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -51300,10 +51300,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // import market from '../assets/images/market.jpeg';
 
 function App() {
-  // var styledBkrnd = {
-  //   backgroundImage: 'url(' + market + ')',
-  //   backgroundSize: 'cover',
-  // };
   return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
     'div',
     {
@@ -53377,7 +53373,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   var action = arguments[1];
 
   var newState = void 0;
-  var newOldState = void 0;
   var jobName = action.jobName,
       client = action.client,
       jobStart = action.jobStart,
@@ -53403,8 +53398,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         id: id
       }));
 
-      console.log(state);
-      console.log(newState);
       return newState;
 
     case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].SHOW_JOB_DISPATCH:
@@ -53416,14 +53409,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return newState;
 
     case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].SEND_OFFER:
-      // newState = Object.assign({}, state);
-      // console.log(state)
-      // console.log(newState[id])
-      //
-      // // Object.keys(newState).forEach(function(key) {
-      //
-      // newState[id].jobMembers[jobMembId].offerSent = 'yes'
-      // // });
       newState = Object.assign({}, state, _defineProperty({}, id, Object.assign({}, state[id], {
         jobMembers: Object.assign({}, state[id].jobMembers, _defineProperty({}, jobMembId, Object.assign({}, state[id].jobMembers[jobMembId], {
           offerSent: "yes"
