@@ -46,6 +46,8 @@ let showSelectedList
     <div>
       <style jsx>{`
         div {
+          display: flex;
+          flex-direction: row;
           font-family: arial;
           background-color: lightgrey;
           color: black;

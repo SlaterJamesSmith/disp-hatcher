@@ -15,6 +15,9 @@ function Dispatcher(props){
       <style jsx>{`
          div {
            font-family: arial;
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
          }
          h2 {
            background-color: lightgreen;
@@ -22,12 +25,14 @@ function Dispatcher(props){
            color: forestgreen;
            border: 3px solid forestgreen;
            text-align: center;
+           width: 100vw;
          }
          h3 {
            padding: 10px;
            background-color: darkgray;
            color: white;
            text-align: center;
+           width: 100vw;
          }
          ul {
            padding: 8px;
