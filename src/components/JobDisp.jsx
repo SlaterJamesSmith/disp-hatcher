@@ -67,10 +67,11 @@ let showSelectedList
           font-size: 15px;
         }
         #notselected {
-          color: red;
+          color: black;
         }
         #selected {
-          color: green;
+          color: black;
+          box-shadow: inset 0 0 10px #404040;
         }
        `}</style>
 
