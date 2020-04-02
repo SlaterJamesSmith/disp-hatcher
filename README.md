@@ -5,7 +5,7 @@
 
 ### Description
 
-Application built for React routing and state management practice using Redux. The application is meant to act as a worker dispatcher for organizations that need to manage large numbers of contract workers in realtime. Specifically, this app is being built with trade unions in mind, but could be applicable to any industry that needs to efficiently manage, track, and dispatch contract workers or employees (examples: dental professionals, medical, government workers, police dispatch, temp agencies, etc.)
+Application built for React routing and state management practice using Redux. The application is meant to act as a worker dispatcher for organizations that need to manage large numbers of contract workers in realtime. Specifically, this app is being built with trade unions in mind, but could be applicable to any industry that needs to efficiently manage, track, and dispatch contract workers or employees (examples: dental professionals, medical, government workers, police dispatch, temp agencies, etc.). Project in progress, view live at: https://slaterjamessmith.github.io/disp-hatcher/#/
 
 ### Component Tree
 
