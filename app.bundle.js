@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c5864b54e3eefc950af5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "baefaca223431bee7f7a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -51445,14 +51445,14 @@ function Dispatcher(props) {
   return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
     'div',
     {
-      className: 'jsx-1495312294'
+      className: 'jsx-2091439108'
     },
     __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default.a,
       {
-        id: '1495312294'
+        id: '2091439108'
       },
-      ['div.jsx-1495312294{font-family:arial;}', 'h2.jsx-1495312294{background-color:lightgreen;padding:10px;color:forestgreen;border:3px solid forestgreen;text-align:center;}', 'ul.jsx-1495312294{padding:8px;}', 'li.jsx-1495312294{display:block;padding:0;margin-bottom:0;}']
+      ['div.jsx-2091439108{font-family:arial;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}', 'h2.jsx-2091439108{background-color:lightgreen;padding:10px;color:forestgreen;border:3px solid forestgreen;text-align:center;width:100vw;}', 'h3.jsx-2091439108{padding:10px;background-color:darkgray;color:white;text-align:center;width:100vw;margin-top:0;margin-bottom:5px;padding-top:0;}', 'ul.jsx-2091439108{padding:8px;}', 'li.jsx-2091439108{display:block;padding:0;margin-bottom:0;}']
     ),
     Object.keys(props.jobDispList).map(function (id) {
       var job = props.jobDispList[id];
@@ -51464,9 +51464,23 @@ function Dispatcher(props) {
     __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
       'h2',
       {
-        className: 'jsx-1495312294'
+        className: 'jsx-2091439108'
       },
       'Sort Buttons Here'
+    ),
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+      'h3',
+      {
+        className: 'jsx-2091439108'
+      },
+      'To begin, click \'job builder\' to create a job'
+    ),
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+      'h3',
+      {
+        className: 'jsx-2091439108'
+      },
+      'Create multiple jobs to toggle between them and update workers on specific jobs'
     ),
     Object.keys(props.jobDispList).map(function (id) {
       var job = props.jobDispList[id];
@@ -51871,9 +51885,9 @@ function JobDisp(props) {
   }
 
   if (props.jobDispShow == true) {
-    showSelectedList = '(Selected)';
+    showSelectedList = 'selected';
   } else {
-    showSelectedList = null;
+    showSelectedList = 'notselected';
   }
 
   // {Object.keys(props.jobDispList).map(function(id) {
@@ -51896,22 +51910,20 @@ function JobDisp(props) {
   return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
     'div',
     {
-      className: 'jsx-2627131005'
+      className: 'jsx-720791143'
     },
     __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default.a,
       {
-        id: '2627131005'
+        id: '720791143'
       },
-      ['div.jsx-2627131005{font-family:arial;background-color:lightgrey;color:black;}', 'ul.jsx-2627131005{padding:8px;border:3px solid grey;}', 'li.jsx-2627131005{display:block;padding:0;margin-top:-10px;}', 'span.jsx-2627131005{color:gray;}']
+      ['div.jsx-720791143{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;font-family:arial;background-color:none;color:black;}', 'ul.jsx-720791143{padding:8px;border:3px solid grey;}', 'li.jsx-720791143{display:block;padding:0;margin-top:-10px;}', 'span.jsx-720791143{color:gray;}', 'button.jsx-720791143{font-weight:bold;font-size:15px;border-radius:5px;}', '#notselected.jsx-720791143{color:black;}', '#selected.jsx-720791143{color:black;box-shadow:inset 0 0 10px #404040;outline:none;}']
     ),
     __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
       'button',
-      { onClick: handleJobShow, className: 'jsx-2627131005'
+      { onClick: handleJobShow, id: showSelectedList, className: 'jsx-720791143'
       },
-      props.jobName,
-      ' ',
-      showSelectedList
+      props.jobName
     )
   );
 }
